@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- Load css -->
+<link href="/static/c3/c3.css" rel="stylesheet" type="text/css">
+<link href="/static/bootstrap-3.3.4-dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+<!-- Get emjoi support -->
+<script src="//twemoji.maxcdn.com/twemoji.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/twemoji/1.3.2/twemoji.min.js"></script>
+<!-- Load jquery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{{
+  url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+</head>
+
+<body>
+<!-- Load d3.js and c3.js -->
+<script src="/static/d3/d3.min.js" charset="utf-8"></script>
+<script src="/static/c3/c3.js"></script>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+	<ul class="nav navbar-nav">
+	  <a href="../" class="navbar-brand">Name</a>
+	  <li><a href='google.com'>About me</a>
+	  <li><a href='google.com'>Analysis</a>
+	</ul>
+    </div>
+  </div>
+</nav>
+<!-- <h2 class="col-md-12">Fast Food Twitter Sentiment</h2>
+<p class="col-md-8">The chart below displays the sentiment index of a given fast food restaurant
+over the past 24 hours.  This index is calculated as the ratio of positive tweets
+to total number of tweets in the past hour.  Additionally, clicking on any data
+point on the chart, a collection of positive and negative tweets from the last 10 
+minutes will be displayed.</p> -->
+</script>
+<div id="chart" style="padding-right:1cm;"></div>
+<div class="col-md-6">
+<h3>Negative Tweets</h3>
+<ul  id="bad">
+<li class='col-md-12' style="word-wrap:break-word;"></li>
+<li class='col-md-12' style="word-wrap:break-word;"></li>
+<li class='col-md-12' style="word-wrap:break-word;"></li>
+</ul>
+</div>
+
+<div class="col-md-6">
+<h3>Positive Tweets</h3>
+<ul id="good">
+<li class='col-md-12' style="word-wrap:break-word;"></li>
+<li class='col-md-12' style="word-wrap:break-word;"></li>
+<li class='col-md-12' style="word-wrap:break-word;"></li>
+</ul>
+</div>
+<script>
+{% autoescape false %}
+var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }}
+
+var times = {{ times | tojson | safe}}
+var avgs = {{ avgs | tojson | safe }}
+var bk_times = {{ bk_times | tojson | safe }}
+var bk_avgs = {{ bk_avgs | tojson | safe }}
+var st_times = {{ st_times | tojson | safe }}
+var st_avgs = {{ st_avgs | tojson | safe }}
+var ch_times = {{ ch_times | tojson | safe }}
+var ch_avgs = {{ ch_avgs | tojson | safe }}
+var ta_times = {{ ta_times | tojson | safe }}
+var ta_avgs = {{ ta_avgs | tojson | safe }}
+var kfc_times = {{ kfc_times | tojson | safe }}
+var kfc_avgs = {{ kfc_avgs | tojson | safe }}
+
+
+var chart = c3.generate({
+    bindto: '#chart',
+    data: {
+	xs: {
+	    "McDonald's": 'time',
+	    "Burger King": 'bktime',
+	    "Starbucks": 'st_times',
+	    "Chipotle": 'ch_times',
+	    "Taco Bell": 'ta_times',
+	    "KFC": 'kfc_times',
+            },
+	columns: [
+		['time'].concat(times),
+		["McDonald's"].concat(avgs),
+		['bktime'].concat(bk_times),
+		["Burger King"].concat(bk_avgs),
+		['st_times'].concat(st_times),
+		['Starbucks'].concat(st_avgs),
+		['ch_times'].concat(ch_times),
+		['Chipotle'].concat(ch_avgs),
+		['ta_times'].concat(ta_times),
+		['Taco Bell'].concat(ta_avgs),
+		['kfc_times'].concat(kfc_times),
+		['KFC'].concat(kfc_avgs)
+        ],
+	hide: ['Starbucks', 'Chipotle', 'Taco Bell', 'KFC'],
+	selection: {
+	    enabled: true,
+	    multiple: false
+	},
+	onselected: function (d) {
+	   $.getJSON($SCRIPT_ROOT + '/_get_tweets', {
+	   	rest: d.name,
+	        ts: Date.parse(d.x) / 1000
+	   }, function(data) {
+	      var bad = data['bad']
+	      console.log(twemoji.parse(bad[0]))
+	      var good = data['good']
+	      for (i = 0; i < bad.length; i++) {
+		  $("#bad li:nth-child(" + String(i + 1) + ")").html(twemoji.parse(JSON.parse('"' + bad[i] + '"')));
+	      }
+	      for (i = 0; i < good.length; i++) {
+		  $("#good li:nth-child(" + String(i + 1) + ")").html(twemoji.parse(JSON.parse('"' + good[i] + '"')));
+	      }
+	   });
+	   return false;
+	},
+	onunselected: function (d) {
+	      $('#good li').empty();
+	      $('#bad li').empty();
+	}
+    },
+    point: {
+	show: false
+    },
+    tooltip: {
+	grouped: false
+    },
+    axis: {
+	x: {
+	   type: 'timeseries',
+	   tick: {
+		format: '%I:%M %p',
+		fit: false
+	   },
+	   min: times[0],
+	   max: times[times.length - 1]
+	},
+	y: {
+	   tick: {
+		format: d3.format(".02f")
+	   }
+	}
+    }
+});
+
+{% endautoescape %}
+</script>
+</body>
+</html>

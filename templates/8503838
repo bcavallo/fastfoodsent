@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html class="  ">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# githubog: http://ogp.me/ns/fb/githubog#">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Line chart, with comments</title>
+
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="NlsxulvRNqioOtRcJ6uVHOpSQyzYpx/SMpJe8RVnyC7MIxrBN3FLexzTiXJaCMgVnwHRIyY1ivRVjHWQkqR51Q==" name="csrf-token" />
+  <meta name="viewport" content="width=960">
+
+
+    <link type="text/plain" rel="author" href="https://github.com/humans.txt" />
+    <meta content="gist" name="octolytics-app-id" /><meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="2D37B953:175E:2B128C4:55220A31" name="octolytics-dimension-request_id" />
+  <link rel="assets" href="https://gist-assets.github.com/">
+  <link rel="zeroclipboard-assets" href="https://gist-assets.github.com/assets/zeroclipboard/dist/ZeroClipboard-aeb54c213f0d09883fed5a0947132da9.swf">
+  <link rel="editor-assets" href="https://gist-assets.github.com/assets/editor-cac2d04c8f22b5ffe38f6bc97dc54f54.js">
+  <link rel="mount-point" href="/">
+
+
+  <link href="https://gist-assets.github.com/assets/application-0622f4c051642df21ab90d3eb66a52b8.css" media="screen, print" rel="stylesheet" />
+  <script src="https://gist-assets.github.com/assets/application-9441728a90e54c65c8d4079bfabcbff5.js"></script>
+
+      <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@github">
+  <meta property="og:title" content="ritchieking/data.tsv">
+  <meta property="og:type" content="githubog:gist">
+  <meta property="og:url" content="https://gist.github.com/ritchieking/8503838">
+  <meta property="og:image" content="https://avatars3.githubusercontent.com/u/2760121?s=140">
+  <meta property="og:site_name" content="GitHub Gists">
+  <meta property="og:description" content="Line chart, with comments - Gist is a simple way to share snippets of text and code with others.">
+  <meta name="description" content="Line chart, with comments - Gist is a simple way to share snippets of text and code with others.">
+
+
+</head>
+
+<body class=" "
+  data-plan="">
+
+  <div id="wrapper">
+    
+
+    <div id="header" class="header header-logged-out">
+      <div class="container" class="clearfix">
+        <a class="header-logo-wordmark" href="https://gist.github.com/">
+          <span class="octicon octicon-logo-github"></span>
+          <span class="octicon-logo octicon-logo-gist"></span>
+        </a>
+
+        <div class="header-actions">
+          <a class="button primary" href="https://github.com/signup?return_to=gist">Sign up for a GitHub account</a>
+          <a class="button" href="https://gist.github.com/login?return_to=%2Fritchieking%2F8503838" data-skip-pjax>Sign in</a>
+        </div>
+        <div class="divider-vertical"></div>
+        <div class="topsearch">
+  <form id="top_search_form" action="/search" data-pjax-remote=push accept-charset="UTF-8">
+    <div class="search">
+      <input type="text" class="search js-search js-navigation-enable " name="q" placeholder="Search&#x2026;" data-hotkey="/" autocomplete=off autocorrect=off value="" >
+
+    </div>
+    <div class="divider-vertical"></div>
+  </form>
+  <ul class="top-nav">
+    <li class="explore"><a href="/discover">All Gists</a></li>
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+    <div class="site-content" id="js-pjax-container" data-pjax-container>
+      <div id="js-flash-container" class="site-container js-site-container" data-url="/ritchieking/8503838">
+  
+  
+
+<meta content="true" name="octolytics-dimension-public" /><meta content="8503838" name="octolytics-dimension-gist_id" /><meta content="8503838" name="octolytics-dimension-gist_name" /><meta content="false" name="octolytics-dimension-anonymous" /><meta content="2760121" name="octolytics-dimension-owner_id" /><meta content="ritchieking" name="octolytics-dimension-owner_login" /><meta content="false" name="octolytics-dimension-forked" />
+
+<div class="pagehead repohead">
+  <div class="container">
+    <div class="title-actions-bar">
+      <ul class="pagehead-actions">
+
+      </ul>
+      <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title ">
+  <div class="meta">
+    <div class="gist-author">
+      <img src="https://avatars3.githubusercontent.com/u/2760121?s=140" width="26" height="26">
+        <span class="author vcard">
+            <span itemprop="title"><a href="/ritchieking">ritchieking</a></span>
+        </span> /
+      <strong><a href="/ritchieking/8503838" class="js-current-repository">data.tsv</a></strong>
+    </div>
+    <div class="gist-timestamp">
+        <span class="datetime">Last active <time datetime="2014-01-19T13:58:01Z" is="relative-time">January 19, 2014</time></span>
+    </div>
+</h1>
+
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="gist js-gist-container gist-with-sidebar with-full-navigation"
+    data-version="e1356c90427a5b8dc9a294fefd9f638ea7179bf5"
+    data-created="false"
+    data-updated="false">
+
+      <div class="gist-sidebar clearfix">
+  <div class="sunken-menu vertical-right repo-nav js-repo-nav js-repository-container-pjax js-octicon-loaders">
+    <div class="sunken-menu-contents">
+      <ul class="sunken-menu-group">
+        <li class="tooltipped tooltipped-w" aria-label="Code">
+          <a aria-label="Code" class="sunken-menu-item selected" data-pjax="true" href="/ritchieking/8503838">
+            <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+            <img alt="" class="mini-loader" height="16" src="https://gist-assets.github.com/assets/spinners/octocat-spinner-32-ad13d0fd1814c3fda3b5018da94432ea.gif" width="16" />
+</a>        </li>
+
+          <li class="tooltipped tooltipped-w" aria-label="Revisions">
+            <a aria-label="Revisions" class="sunken-menu-item" data-pjax="true" href="/ritchieking/8503838/revisions">
+              <span class="octicon octicon-git-commit"></span> <span class="full-word">Revisions</span>
+              <img alt="" class="mini-loader" height="16" src="https://gist-assets.github.com/assets/spinners/octocat-spinner-32-ad13d0fd1814c3fda3b5018da94432ea.gif" width="16" />
+              <span class='counter'>11</span>
+</a>          </li>
+
+
+      </ul>
+    </div><!-- /.sunken-menu-group -->
+  </div><!-- /.sunken-menu-contents -->
+
+  <div class="only-with-full-nav">
+
+    <div class="embed-url open" style="display: block;">
+      <h3><strong>Embed</strong> URL</h3>
+      <div class="clone-url-box">
+        <input type="text" class="clone js-url-field" value="&lt;script src=&quot;https://gist.github.com/ritchieking/8503838.js&quot;&gt;&lt;/script&gt;" readonly="readonly">
+        <span class="url-box-clippy">
+          <button aria-label="copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="&lt;script src=&quot;https://gist.github.com/ritchieking/8503838.js&quot;&gt;&lt;/script&gt;" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+        </span>
+      </div>
+    </div>
+    <p class="clone-options"></p>
+
+      
+<div class="clone-url open" data-protocol-type="http" data-url="https://gist.github.com/8503838.git">
+  <h3><strong>HTTPS</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone url-field js-url-field" value="https://gist.github.com/8503838.git" readonly="readonly">
+    <span class="url-box-clippy">
+      <button aria-label="copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://gist.github.com/8503838.git" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+<div class="clone-url " data-protocol-type="ssh" data-url="git@gist.github.com:/8503838.git">
+  <h3><strong>SSH</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone url-field js-url-field" value="git@gist.github.com:/8503838.git" readonly="readonly">
+    <span class="url-box-clippy">
+      <button aria-label="copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="git@gist.github.com:/8503838.git" data-copied-hint="copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+
+<p class="clone-options">You can clone with
+      <a href="#" class="js-clone-selector" data-skip-pjax data-protocol="http">HTTPS</a>
+      or <a href="#" class="js-clone-selector" data-skip-pjax data-protocol="ssh">SSH</a>.
+</p>
+
+
+    <a aria-label="Download data.tsv as a zip file" class="minibutton sidebar-button" href="/ritchieking/8503838/download" rel="nofollow" title="Download data.tsv as a zip file">
+      <span class="octicon octicon-cloud-download"></span>
+      Download Gist
+</a>  </div><!-- /.only-with-full-nav -->
+
+</div>
+
+
+    <div class="gist-content">
+          <div class="gist-meta">
+            <div class="gist-description">
+              <p><div>Line chart, with comments</div></p>
+            </div>
+          </div>
+
+      <div class="files">
+            <div id="file-data-tsv" class="file ">
+    <a href="/ritchieking/8503838" class="link-overlay">
+    <span class="link">View <strong>data.tsv</strong> <span class="octicon octicon-arrow-right"></span></span>
+  </a>
+  <div class="meta clearfix">
+    <div class="info file-name">
+      <span class="icon">
+        <b class="octicon octicon-gist"></b>
+      </span>
+      <a aria-label="Permalink" href="#file-data-tsv" class="tooltipped tooltipped-s permalink"><strong class="file-name js-selectable-text">data.tsv</strong></a>
+    </div>
+    <div class="actions">
+      <div class="button-group">
+        <a aria-label="View Raw"
+          href="/ritchieking/8503838/raw/a35e210d757141b69ebb228de39f7ece497f2375/data.tsv"
+          data-skip-pjax class="minibutton raw-url js-view-raw">Raw</a>
+      </div>
+    </div>
+  </div>
+  <div class="suppressed">
+    <a class="js-show-suppressed-file">File suppressed. Click to show.</a>
+  </div>
+  <div class="blob-wrapper data type-text js-blob-data">
+    
+
+
+
+    <div class="file-data">
+      <table cellpadding="0" cellspacing="0" class="lines highlight">
+        <tr>
+          <td class="line-numbers">
+            <span class="line-number" id="file-data-tsv-L1" rel="file-data-tsv-L1">1</span>
+            <span class="line-number" id="file-data-tsv-L2" rel="file-data-tsv-L2">2</span>
+            <span class="line-number" id="file-data-tsv-L3" rel="file-data-tsv-L3">3</span>
+            <span class="line-number" id="file-data-tsv-L4" rel="file-data-tsv-L4">4</span>
+            <span class="line-number" id="file-data-tsv-L5" rel="file-data-tsv-L5">5</span>
+            <span class="line-number" id="file-data-tsv-L6" rel="file-data-tsv-L6">6</span>
+            <span class="line-number" id="file-data-tsv-L7" rel="file-data-tsv-L7">7</span>
+            <span class="line-number" id="file-data-tsv-L8" rel="file-data-tsv-L8">8</span>
+            <span class="line-number" id="file-data-tsv-L9" rel="file-data-tsv-L9">9</span>
+            <span class="line-number" id="file-data-tsv-L10" rel="file-data-tsv-L10">10</span>
+            <span class="line-number" id="file-data-tsv-L11" rel="file-data-tsv-L11">11</span>
+            <span class="line-number" id="file-data-tsv-L12" rel="file-data-tsv-L12">12</span>
+            <span class="line-number" id="file-data-tsv-L13" rel="file-data-tsv-L13">13</span>
+            <span class="line-number" id="file-data-tsv-L14" rel="file-data-tsv-L14">14</span>
+            <span class="line-number" id="file-data-tsv-L15" rel="file-data-tsv-L15">15</span>
+            <span class="line-number" id="file-data-tsv-L16" rel="file-data-tsv-L16">16</span>
+            <span class="line-number" id="file-data-tsv-L17" rel="file-data-tsv-L17">17</span>
+            <span class="line-number" id="file-data-tsv-L18" rel="file-data-tsv-L18">18</span>
+            <span class="line-number" id="file-data-tsv-L19" rel="file-data-tsv-L19">19</span>
+            <span class="line-number" id="file-data-tsv-L20" rel="file-data-tsv-L20">20</span>
+            <span class="line-number" id="file-data-tsv-L21" rel="file-data-tsv-L21">21</span>
+            <span class="line-number" id="file-data-tsv-L22" rel="file-data-tsv-L22">22</span>
+            <span class="line-number" id="file-data-tsv-L23" rel="file-data-tsv-L23">23</span>
+            <span class="line-number" id="file-data-tsv-L24" rel="file-data-tsv-L24">24</span>
+            <span class="line-number" id="file-data-tsv-L25" rel="file-data-tsv-L25">25</span>
+            <span class="line-number" id="file-data-tsv-L26" rel="file-data-tsv-L26">26</span>
+            <span class="line-number" id="file-data-tsv-L27" rel="file-data-tsv-L27">27</span>
+            <span class="line-number" id="file-data-tsv-L28" rel="file-data-tsv-L28">28</span>
+            <span class="line-number" id="file-data-tsv-L29" rel="file-data-tsv-L29">29</span>
+            <span class="line-number" id="file-data-tsv-L30" rel="file-data-tsv-L30">30</span>
+            <span class="line-number" id="file-data-tsv-L31" rel="file-data-tsv-L31">31</span>
+            <span class="line-number" id="file-data-tsv-L32" rel="file-data-tsv-L32">32</span>
+            <span class="line-number" id="file-data-tsv-L33" rel="file-data-tsv-L33">33</span>
+            <span class="line-number" id="file-data-tsv-L34" rel="file-data-tsv-L34">34</span>
+            <span class="line-number" id="file-data-tsv-L35" rel="file-data-tsv-L35">35</span>
+            <span class="line-number" id="file-data-tsv-L36" rel="file-data-tsv-L36">36</span>
+            <span class="line-number" id="file-data-tsv-L37" rel="file-data-tsv-L37">37</span>
+            <span class="line-number" id="file-data-tsv-L38" rel="file-data-tsv-L38">38</span>
+            <span class="line-number" id="file-data-tsv-L39" rel="file-data-tsv-L39">39</span>
+            <span class="line-number" id="file-data-tsv-L40" rel="file-data-tsv-L40">40</span>
+            <span class="line-number" id="file-data-tsv-L41" rel="file-data-tsv-L41">41</span>
+            <span class="line-number" id="file-data-tsv-L42" rel="file-data-tsv-L42">42</span>
+            <span class="line-number" id="file-data-tsv-L43" rel="file-data-tsv-L43">43</span>
+            <span class="line-number" id="file-data-tsv-L44" rel="file-data-tsv-L44">44</span>
+            <span class="line-number" id="file-data-tsv-L45" rel="file-data-tsv-L45">45</span>
+            <span class="line-number" id="file-data-tsv-L46" rel="file-data-tsv-L46">46</span>
+            <span class="line-number" id="file-data-tsv-L47" rel="file-data-tsv-L47">47</span>
+            <span class="line-number" id="file-data-tsv-L48" rel="file-data-tsv-L48">48</span>
+            <span class="line-number" id="file-data-tsv-L49" rel="file-data-tsv-L49">49</span>
+            <span class="line-number" id="file-data-tsv-L50" rel="file-data-tsv-L50">50</span>
+            <span class="line-number" id="file-data-tsv-L51" rel="file-data-tsv-L51">51</span>
+            <span class="line-number" id="file-data-tsv-L52" rel="file-data-tsv-L52">52</span>
+          </td>
+          <td class="line-data">
+            <pre class="line-pre"><div class="line" id="file-data-tsv-LC1">year	lifeExpectancy
+</div><div class="line" id="file-data-tsv-LC2">1/1/1961	53.00618814
+</div><div class="line" id="file-data-tsv-LC3">1/1/1962	53.49544588
+</div><div class="line" id="file-data-tsv-LC4">1/1/1963	54.14244036
+</div><div class="line" id="file-data-tsv-LC5">1/1/1964	54.97746907
+</div><div class="line" id="file-data-tsv-LC6">1/1/1965	55.82684751
+</div><div class="line" id="file-data-tsv-LC7">1/1/1966	56.74868644
+</div><div class="line" id="file-data-tsv-LC8">1/1/1967	57.61738778
+</div><div class="line" id="file-data-tsv-LC9">1/1/1968	58.33389775
+</div><div class="line" id="file-data-tsv-LC10">1/1/1969	59.00507154
+</div><div class="line" id="file-data-tsv-LC11">1/1/1970	59.59217127
+</div><div class="line" id="file-data-tsv-LC12">1/1/1971	60.08082426
+</div><div class="line" id="file-data-tsv-LC13">1/1/1972	60.49296656
+</div><div class="line" id="file-data-tsv-LC14">1/1/1973	60.85638163
+</div><div class="line" id="file-data-tsv-LC15">1/1/1974	61.26343093
+</div><div class="line" id="file-data-tsv-LC16">1/1/1975	61.62668426
+</div><div class="line" id="file-data-tsv-LC17">1/1/1976	61.97408697
+</div><div class="line" id="file-data-tsv-LC18">1/1/1977	62.33021711
+</div><div class="line" id="file-data-tsv-LC19">1/1/1978	62.63088187
+</div><div class="line" id="file-data-tsv-LC20">1/1/1979	62.94032196
+</div><div class="line" id="file-data-tsv-LC21">1/1/1980	63.18719679
+</div><div class="line" id="file-data-tsv-LC22">1/1/1981	63.49452384
+</div><div class="line" id="file-data-tsv-LC23">1/1/1982	63.79853101
+</div><div class="line" id="file-data-tsv-LC24">1/1/1983	64.03326825
+</div><div class="line" id="file-data-tsv-LC25">1/1/1984	64.29128534
+</div><div class="line" id="file-data-tsv-LC26">1/1/1985	64.54567853
+</div><div class="line" id="file-data-tsv-LC27">1/1/1986	64.84644025
+</div><div class="line" id="file-data-tsv-LC28">1/1/1987	65.10007882
+</div><div class="line" id="file-data-tsv-LC29">1/1/1988	65.3044991
+</div><div class="line" id="file-data-tsv-LC30">1/1/1989	65.51592402
+</div><div class="line" id="file-data-tsv-LC31">1/1/1990	65.69645159
+</div><div class="line" id="file-data-tsv-LC32">1/1/1991	65.86228667
+</div><div class="line" id="file-data-tsv-LC33">1/1/1992	65.99723977
+</div><div class="line" id="file-data-tsv-LC34">1/1/1993	66.08334808
+</div><div class="line" id="file-data-tsv-LC35">1/1/1994	66.25878373
+</div><div class="line" id="file-data-tsv-LC36">1/1/1995	66.43599275
+</div><div class="line" id="file-data-tsv-LC37">1/1/1996	66.69034593
+</div><div class="line" id="file-data-tsv-LC38">1/1/1997	66.95916797
+</div><div class="line" id="file-data-tsv-LC39">1/1/1998	67.18587271
+</div><div class="line" id="file-data-tsv-LC40">1/1/1999	67.41704789
+</div><div class="line" id="file-data-tsv-LC41">1/1/2000	67.69058418
+</div><div class="line" id="file-data-tsv-LC42">1/1/2001	67.98333357
+</div><div class="line" id="file-data-tsv-LC43">1/1/2002	68.23767908
+</div><div class="line" id="file-data-tsv-LC44">1/1/2003	68.49809111
+</div><div class="line" id="file-data-tsv-LC45">1/1/2004	68.80300304
+</div><div class="line" id="file-data-tsv-LC46">1/1/2005	69.03462379
+</div><div class="line" id="file-data-tsv-LC47">1/1/2006	69.33145142
+</div><div class="line" id="file-data-tsv-LC48">1/1/2007	69.59024029
+</div><div class="line" id="file-data-tsv-LC49">1/1/2008	69.81932781
+</div><div class="line" id="file-data-tsv-LC50">1/1/2009	70.07339995
+</div><div class="line" id="file-data-tsv-LC51">1/1/2010	70.31041664
+</div><div class="line" id="file-data-tsv-LC52">1/1/2011	70.53933561
+</div></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+            <div id="file-index-html" class="file ">
+    <a href="/ritchieking/8503838" class="link-overlay">
+    <span class="link">View <strong>data.tsv</strong> <span class="octicon octicon-arrow-right"></span></span>
+  </a>
+  <div class="meta clearfix">
+    <div class="info file-name">
+      <span class="icon">
+        <b class="octicon octicon-gist"></b>
+      </span>
+      <a aria-label="Permalink" href="#file-index-html" class="tooltipped tooltipped-s permalink"><strong class="file-name js-selectable-text">index.html</strong></a>
+    </div>
+    <div class="actions">
+      <div class="button-group">
+        <a aria-label="View Raw"
+          href="/ritchieking/8503838/raw/cdfa4e3dc10b19a04edb2ebc34560c6319016ff5/index.html"
+          data-skip-pjax class="minibutton raw-url js-view-raw">Raw</a>
+      </div>
+    </div>
+  </div>
+  <div class="suppressed">
+    <a class="js-show-suppressed-file">File suppressed. Click to show.</a>
+  </div>
+  <div class="blob-wrapper data type-html js-blob-data">
+    
+
+
+
+    <div class="file-data">
+      <table cellpadding="0" cellspacing="0" class="lines highlight">
+        <tr>
+          <td class="line-numbers">
+            <span class="line-number" id="file-index-html-L1" rel="file-index-html-L1">1</span>
+            <span class="line-number" id="file-index-html-L2" rel="file-index-html-L2">2</span>
+            <span class="line-number" id="file-index-html-L3" rel="file-index-html-L3">3</span>
+            <span class="line-number" id="file-index-html-L4" rel="file-index-html-L4">4</span>
+            <span class="line-number" id="file-index-html-L5" rel="file-index-html-L5">5</span>
+            <span class="line-number" id="file-index-html-L6" rel="file-index-html-L6">6</span>
+            <span class="line-number" id="file-index-html-L7" rel="file-index-html-L7">7</span>
+            <span class="line-number" id="file-index-html-L8" rel="file-index-html-L8">8</span>
+            <span class="line-number" id="file-index-html-L9" rel="file-index-html-L9">9</span>
+            <span class="line-number" id="file-index-html-L10" rel="file-index-html-L10">10</span>
+            <span class="line-number" id="file-index-html-L11" rel="file-index-html-L11">11</span>
+            <span class="line-number" id="file-index-html-L12" rel="file-index-html-L12">12</span>
+            <span class="line-number" id="file-index-html-L13" rel="file-index-html-L13">13</span>
+            <span class="line-number" id="file-index-html-L14" rel="file-index-html-L14">14</span>
+            <span class="line-number" id="file-index-html-L15" rel="file-index-html-L15">15</span>
+            <span class="line-number" id="file-index-html-L16" rel="file-index-html-L16">16</span>
+            <span class="line-number" id="file-index-html-L17" rel="file-index-html-L17">17</span>
+            <span class="line-number" id="file-index-html-L18" rel="file-index-html-L18">18</span>
+            <span class="line-number" id="file-index-html-L19" rel="file-index-html-L19">19</span>
+            <span class="line-number" id="file-index-html-L20" rel="file-index-html-L20">20</span>
+            <span class="line-number" id="file-index-html-L21" rel="file-index-html-L21">21</span>
+            <span class="line-number" id="file-index-html-L22" rel="file-index-html-L22">22</span>
+            <span class="line-number" id="file-index-html-L23" rel="file-index-html-L23">23</span>
+            <span class="line-number" id="file-index-html-L24" rel="file-index-html-L24">24</span>
+            <span class="line-number" id="file-index-html-L25" rel="file-index-html-L25">25</span>
+            <span class="line-number" id="file-index-html-L26" rel="file-index-html-L26">26</span>
+            <span class="line-number" id="file-index-html-L27" rel="file-index-html-L27">27</span>
+            <span class="line-number" id="file-index-html-L28" rel="file-index-html-L28">28</span>
+            <span class="line-number" id="file-index-html-L29" rel="file-index-html-L29">29</span>
+            <span class="line-number" id="file-index-html-L30" rel="file-index-html-L30">30</span>
+            <span class="line-number" id="file-index-html-L31" rel="file-index-html-L31">31</span>
+            <span class="line-number" id="file-index-html-L32" rel="file-index-html-L32">32</span>
+            <span class="line-number" id="file-index-html-L33" rel="file-index-html-L33">33</span>
+            <span class="line-number" id="file-index-html-L34" rel="file-index-html-L34">34</span>
+            <span class="line-number" id="file-index-html-L35" rel="file-index-html-L35">35</span>
+            <span class="line-number" id="file-index-html-L36" rel="file-index-html-L36">36</span>
+            <span class="line-number" id="file-index-html-L37" rel="file-index-html-L37">37</span>
+            <span class="line-number" id="file-index-html-L38" rel="file-index-html-L38">38</span>
+            <span class="line-number" id="file-index-html-L39" rel="file-index-html-L39">39</span>
+            <span class="line-number" id="file-index-html-L40" rel="file-index-html-L40">40</span>
+            <span class="line-number" id="file-index-html-L41" rel="file-index-html-L41">41</span>
+            <span class="line-number" id="file-index-html-L42" rel="file-index-html-L42">42</span>
+            <span class="line-number" id="file-index-html-L43" rel="file-index-html-L43">43</span>
+            <span class="line-number" id="file-index-html-L44" rel="file-index-html-L44">44</span>
+            <span class="line-number" id="file-index-html-L45" rel="file-index-html-L45">45</span>
+            <span class="line-number" id="file-index-html-L46" rel="file-index-html-L46">46</span>
+            <span class="line-number" id="file-index-html-L47" rel="file-index-html-L47">47</span>
+            <span class="line-number" id="file-index-html-L48" rel="file-index-html-L48">48</span>
+            <span class="line-number" id="file-index-html-L49" rel="file-index-html-L49">49</span>
+            <span class="line-number" id="file-index-html-L50" rel="file-index-html-L50">50</span>
+            <span class="line-number" id="file-index-html-L51" rel="file-index-html-L51">51</span>
+            <span class="line-number" id="file-index-html-L52" rel="file-index-html-L52">52</span>
+            <span class="line-number" id="file-index-html-L53" rel="file-index-html-L53">53</span>
+            <span class="line-number" id="file-index-html-L54" rel="file-index-html-L54">54</span>
+            <span class="line-number" id="file-index-html-L55" rel="file-index-html-L55">55</span>
+            <span class="line-number" id="file-index-html-L56" rel="file-index-html-L56">56</span>
+            <span class="line-number" id="file-index-html-L57" rel="file-index-html-L57">57</span>
+            <span class="line-number" id="file-index-html-L58" rel="file-index-html-L58">58</span>
+            <span class="line-number" id="file-index-html-L59" rel="file-index-html-L59">59</span>
+            <span class="line-number" id="file-index-html-L60" rel="file-index-html-L60">60</span>
+            <span class="line-number" id="file-index-html-L61" rel="file-index-html-L61">61</span>
+            <span class="line-number" id="file-index-html-L62" rel="file-index-html-L62">62</span>
+            <span class="line-number" id="file-index-html-L63" rel="file-index-html-L63">63</span>
+            <span class="line-number" id="file-index-html-L64" rel="file-index-html-L64">64</span>
+            <span class="line-number" id="file-index-html-L65" rel="file-index-html-L65">65</span>
+            <span class="line-number" id="file-index-html-L66" rel="file-index-html-L66">66</span>
+            <span class="line-number" id="file-index-html-L67" rel="file-index-html-L67">67</span>
+            <span class="line-number" id="file-index-html-L68" rel="file-index-html-L68">68</span>
+            <span class="line-number" id="file-index-html-L69" rel="file-index-html-L69">69</span>
+            <span class="line-number" id="file-index-html-L70" rel="file-index-html-L70">70</span>
+            <span class="line-number" id="file-index-html-L71" rel="file-index-html-L71">71</span>
+            <span class="line-number" id="file-index-html-L72" rel="file-index-html-L72">72</span>
+            <span class="line-number" id="file-index-html-L73" rel="file-index-html-L73">73</span>
+            <span class="line-number" id="file-index-html-L74" rel="file-index-html-L74">74</span>
+            <span class="line-number" id="file-index-html-L75" rel="file-index-html-L75">75</span>
+            <span class="line-number" id="file-index-html-L76" rel="file-index-html-L76">76</span>
+            <span class="line-number" id="file-index-html-L77" rel="file-index-html-L77">77</span>
+            <span class="line-number" id="file-index-html-L78" rel="file-index-html-L78">78</span>
+            <span class="line-number" id="file-index-html-L79" rel="file-index-html-L79">79</span>
+            <span class="line-number" id="file-index-html-L80" rel="file-index-html-L80">80</span>
+            <span class="line-number" id="file-index-html-L81" rel="file-index-html-L81">81</span>
+            <span class="line-number" id="file-index-html-L82" rel="file-index-html-L82">82</span>
+            <span class="line-number" id="file-index-html-L83" rel="file-index-html-L83">83</span>
+            <span class="line-number" id="file-index-html-L84" rel="file-index-html-L84">84</span>
+            <span class="line-number" id="file-index-html-L85" rel="file-index-html-L85">85</span>
+            <span class="line-number" id="file-index-html-L86" rel="file-index-html-L86">86</span>
+            <span class="line-number" id="file-index-html-L87" rel="file-index-html-L87">87</span>
+            <span class="line-number" id="file-index-html-L88" rel="file-index-html-L88">88</span>
+            <span class="line-number" id="file-index-html-L89" rel="file-index-html-L89">89</span>
+            <span class="line-number" id="file-index-html-L90" rel="file-index-html-L90">90</span>
+            <span class="line-number" id="file-index-html-L91" rel="file-index-html-L91">91</span>
+            <span class="line-number" id="file-index-html-L92" rel="file-index-html-L92">92</span>
+            <span class="line-number" id="file-index-html-L93" rel="file-index-html-L93">93</span>
+            <span class="line-number" id="file-index-html-L94" rel="file-index-html-L94">94</span>
+            <span class="line-number" id="file-index-html-L95" rel="file-index-html-L95">95</span>
+            <span class="line-number" id="file-index-html-L96" rel="file-index-html-L96">96</span>
+            <span class="line-number" id="file-index-html-L97" rel="file-index-html-L97">97</span>
+            <span class="line-number" id="file-index-html-L98" rel="file-index-html-L98">98</span>
+            <span class="line-number" id="file-index-html-L99" rel="file-index-html-L99">99</span>
+            <span class="line-number" id="file-index-html-L100" rel="file-index-html-L100">100</span>
+            <span class="line-number" id="file-index-html-L101" rel="file-index-html-L101">101</span>
+            <span class="line-number" id="file-index-html-L102" rel="file-index-html-L102">102</span>
+            <span class="line-number" id="file-index-html-L103" rel="file-index-html-L103">103</span>
+            <span class="line-number" id="file-index-html-L104" rel="file-index-html-L104">104</span>
+            <span class="line-number" id="file-index-html-L105" rel="file-index-html-L105">105</span>
+            <span class="line-number" id="file-index-html-L106" rel="file-index-html-L106">106</span>
+            <span class="line-number" id="file-index-html-L107" rel="file-index-html-L107">107</span>
+            <span class="line-number" id="file-index-html-L108" rel="file-index-html-L108">108</span>
+            <span class="line-number" id="file-index-html-L109" rel="file-index-html-L109">109</span>
+            <span class="line-number" id="file-index-html-L110" rel="file-index-html-L110">110</span>
+            <span class="line-number" id="file-index-html-L111" rel="file-index-html-L111">111</span>
+            <span class="line-number" id="file-index-html-L112" rel="file-index-html-L112">112</span>
+            <span class="line-number" id="file-index-html-L113" rel="file-index-html-L113">113</span>
+            <span class="line-number" id="file-index-html-L114" rel="file-index-html-L114">114</span>
+            <span class="line-number" id="file-index-html-L115" rel="file-index-html-L115">115</span>
+            <span class="line-number" id="file-index-html-L116" rel="file-index-html-L116">116</span>
+            <span class="line-number" id="file-index-html-L117" rel="file-index-html-L117">117</span>
+            <span class="line-number" id="file-index-html-L118" rel="file-index-html-L118">118</span>
+            <span class="line-number" id="file-index-html-L119" rel="file-index-html-L119">119</span>
+            <span class="line-number" id="file-index-html-L120" rel="file-index-html-L120">120</span>
+            <span class="line-number" id="file-index-html-L121" rel="file-index-html-L121">121</span>
+            <span class="line-number" id="file-index-html-L122" rel="file-index-html-L122">122</span>
+            <span class="line-number" id="file-index-html-L123" rel="file-index-html-L123">123</span>
+            <span class="line-number" id="file-index-html-L124" rel="file-index-html-L124">124</span>
+            <span class="line-number" id="file-index-html-L125" rel="file-index-html-L125">125</span>
+            <span class="line-number" id="file-index-html-L126" rel="file-index-html-L126">126</span>
+            <span class="line-number" id="file-index-html-L127" rel="file-index-html-L127">127</span>
+            <span class="line-number" id="file-index-html-L128" rel="file-index-html-L128">128</span>
+            <span class="line-number" id="file-index-html-L129" rel="file-index-html-L129">129</span>
+            <span class="line-number" id="file-index-html-L130" rel="file-index-html-L130">130</span>
+            <span class="line-number" id="file-index-html-L131" rel="file-index-html-L131">131</span>
+            <span class="line-number" id="file-index-html-L132" rel="file-index-html-L132">132</span>
+            <span class="line-number" id="file-index-html-L133" rel="file-index-html-L133">133</span>
+            <span class="line-number" id="file-index-html-L134" rel="file-index-html-L134">134</span>
+            <span class="line-number" id="file-index-html-L135" rel="file-index-html-L135">135</span>
+            <span class="line-number" id="file-index-html-L136" rel="file-index-html-L136">136</span>
+            <span class="line-number" id="file-index-html-L137" rel="file-index-html-L137">137</span>
+            <span class="line-number" id="file-index-html-L138" rel="file-index-html-L138">138</span>
+            <span class="line-number" id="file-index-html-L139" rel="file-index-html-L139">139</span>
+            <span class="line-number" id="file-index-html-L140" rel="file-index-html-L140">140</span>
+            <span class="line-number" id="file-index-html-L141" rel="file-index-html-L141">141</span>
+            <span class="line-number" id="file-index-html-L142" rel="file-index-html-L142">142</span>
+            <span class="line-number" id="file-index-html-L143" rel="file-index-html-L143">143</span>
+            <span class="line-number" id="file-index-html-L144" rel="file-index-html-L144">144</span>
+            <span class="line-number" id="file-index-html-L145" rel="file-index-html-L145">145</span>
+            <span class="line-number" id="file-index-html-L146" rel="file-index-html-L146">146</span>
+            <span class="line-number" id="file-index-html-L147" rel="file-index-html-L147">147</span>
+            <span class="line-number" id="file-index-html-L148" rel="file-index-html-L148">148</span>
+            <span class="line-number" id="file-index-html-L149" rel="file-index-html-L149">149</span>
+            <span class="line-number" id="file-index-html-L150" rel="file-index-html-L150">150</span>
+            <span class="line-number" id="file-index-html-L151" rel="file-index-html-L151">151</span>
+            <span class="line-number" id="file-index-html-L152" rel="file-index-html-L152">152</span>
+            <span class="line-number" id="file-index-html-L153" rel="file-index-html-L153">153</span>
+            <span class="line-number" id="file-index-html-L154" rel="file-index-html-L154">154</span>
+            <span class="line-number" id="file-index-html-L155" rel="file-index-html-L155">155</span>
+            <span class="line-number" id="file-index-html-L156" rel="file-index-html-L156">156</span>
+            <span class="line-number" id="file-index-html-L157" rel="file-index-html-L157">157</span>
+            <span class="line-number" id="file-index-html-L158" rel="file-index-html-L158">158</span>
+            <span class="line-number" id="file-index-html-L159" rel="file-index-html-L159">159</span>
+            <span class="line-number" id="file-index-html-L160" rel="file-index-html-L160">160</span>
+            <span class="line-number" id="file-index-html-L161" rel="file-index-html-L161">161</span>
+            <span class="line-number" id="file-index-html-L162" rel="file-index-html-L162">162</span>
+            <span class="line-number" id="file-index-html-L163" rel="file-index-html-L163">163</span>
+            <span class="line-number" id="file-index-html-L164" rel="file-index-html-L164">164</span>
+            <span class="line-number" id="file-index-html-L165" rel="file-index-html-L165">165</span>
+            <span class="line-number" id="file-index-html-L166" rel="file-index-html-L166">166</span>
+            <span class="line-number" id="file-index-html-L167" rel="file-index-html-L167">167</span>
+            <span class="line-number" id="file-index-html-L168" rel="file-index-html-L168">168</span>
+            <span class="line-number" id="file-index-html-L169" rel="file-index-html-L169">169</span>
+            <span class="line-number" id="file-index-html-L170" rel="file-index-html-L170">170</span>
+            <span class="line-number" id="file-index-html-L171" rel="file-index-html-L171">171</span>
+            <span class="line-number" id="file-index-html-L172" rel="file-index-html-L172">172</span>
+            <span class="line-number" id="file-index-html-L173" rel="file-index-html-L173">173</span>
+            <span class="line-number" id="file-index-html-L174" rel="file-index-html-L174">174</span>
+            <span class="line-number" id="file-index-html-L175" rel="file-index-html-L175">175</span>
+            <span class="line-number" id="file-index-html-L176" rel="file-index-html-L176">176</span>
+            <span class="line-number" id="file-index-html-L177" rel="file-index-html-L177">177</span>
+            <span class="line-number" id="file-index-html-L178" rel="file-index-html-L178">178</span>
+            <span class="line-number" id="file-index-html-L179" rel="file-index-html-L179">179</span>
+            <span class="line-number" id="file-index-html-L180" rel="file-index-html-L180">180</span>
+            <span class="line-number" id="file-index-html-L181" rel="file-index-html-L181">181</span>
+            <span class="line-number" id="file-index-html-L182" rel="file-index-html-L182">182</span>
+            <span class="line-number" id="file-index-html-L183" rel="file-index-html-L183">183</span>
+            <span class="line-number" id="file-index-html-L184" rel="file-index-html-L184">184</span>
+            <span class="line-number" id="file-index-html-L185" rel="file-index-html-L185">185</span>
+          </td>
+          <td class="line-data">
+            <pre class="line-pre"><div class="line" id="file-index-html-LC1">&lt;!DOCTYPE html&gt;
+</div><div class="line" id="file-index-html-LC2">&lt;<span class="pl-ent">meta</span> <span class="pl-e">charset</span>=<span class="pl-s1"><span class="pl-pds">&quot;</span>utf-8<span class="pl-pds">&quot;</span></span>&gt;
+</div><div class="line" id="file-index-html-LC3"><span class="pl-s2">&lt;<span class="pl-ent">style</span>&gt;</span>
+</div><div class="line" id="file-index-html-LC4"><span class="pl-s2"></span>
+</div><div class="line" id="file-index-html-LC5"><span class="pl-s2"><span class="pl-c">/* The &quot;lighter&quot; font-weight just makes the Helvetica thin and stylish */</span></span>
+</div><div class="line" id="file-index-html-LC6"><span class="pl-s2"><span class="pl-ent">body</span> {</span>
+</div><div class="line" id="file-index-html-LC7"><span class="pl-s2">  <span class="pl-mp"><span class="pl-s3">font</span></span>: <span class="pl-c1">14<span class="pl-k">px</span></span> <span class="pl-sc">Helvetica</span>;</span>
+</div><div class="line" id="file-index-html-LC8"><span class="pl-s2">  <span class="pl-mp"><span class="pl-s3">font-weight</span></span>: <span class="pl-sc">lighter</span>;</span>
+</div><div class="line" id="file-index-html-LC9"><span class="pl-s2">}</span>
+</div><div class="line" id="file-index-html-LC10"><span class="pl-s2"></span>
+</div><div class="line" id="file-index-html-LC11"><span class="pl-s2"><span class="pl-c">/* The svg lines here are the tick marks, and the svg paths are the long horizontal and vertical </span></span>
+</div><div class="line" id="file-index-html-LC12"><span class="pl-s2"><span class="pl-c">lines that run parallel to the axes and have a little nub on the end. D3 axes include both by </span></span>
+</div><div class="line" id="file-index-html-LC13"><span class="pl-s2"><span class="pl-c">default. Also, by default, SVG shapes come with a fill but not a stroke. You want to set the </span></span>
+</div><div class="line" id="file-index-html-LC14"><span class="pl-s2"><span class="pl-c">fill to &quot;none&quot; here because otherwise the paths will be filled in (they aren&#39;t one dimensional </span></span>
+</div><div class="line" id="file-index-html-LC15"><span class="pl-s2"><span class="pl-c">because of the nub, so they actually have an inner area that can be filled). You need to </span></span>
+</div><div class="line" id="file-index-html-LC16"><span class="pl-s2"><span class="pl-c">specificy a stroke color, otherwise there won&#39;t be a stroke at all (in other words, the paths </span></span>
+</div><div class="line" id="file-index-html-LC17"><span class="pl-s2"><span class="pl-c">and lines won&#39;t show up). Setting the shape-rendering to crispEdges turns off anti-aliasing, so </span></span>
+</div><div class="line" id="file-index-html-LC18"><span class="pl-s2"><span class="pl-c">the lines and paths will be black pixels surrounded by white pixels (instead of a gradation of </span></span>
+</div><div class="line" id="file-index-html-LC19"><span class="pl-s2"><span class="pl-c">grey). CrispEdges are great for straight, horiztonal and vertical lines, but not for diagonal </span></span>
+</div><div class="line" id="file-index-html-LC20"><span class="pl-s2"><span class="pl-c">lines or curves */</span></span>
+</div><div class="line" id="file-index-html-LC21"><span class="pl-s2"><span class="pl-e">.axis</span> path,</span>
+</div><div class="line" id="file-index-html-LC22"><span class="pl-s2"><span class="pl-e">.axis</span> line {</span>
+</div><div class="line" id="file-index-html-LC23"><span class="pl-s2">  <span class="pl-mp"><span class="pl-s3">fill</span></span>: <span class="pl-sc">none</span>;</span>
+</div><div class="line" id="file-index-html-LC24"><span class="pl-s2">  <span class="pl-mp">stroke</span>: <span class="pl-c1">#000</span>;</span>
+</div><div class="line" id="file-index-html-LC25"><span class="pl-s2">  <span class="pl-mp">shape-rendering</span>: crispEdges;</span>
+</div><div class="line" id="file-index-html-LC26"><span class="pl-s2">}</span>
+</div><div class="line" id="file-index-html-LC27"><span class="pl-s2"></span>
+</div><div class="line" id="file-index-html-LC28"><span class="pl-s2"><span class="pl-c">/* This turns off the path for the y-axis. This is just a personal preference. */</span></span>
+</div><div class="line" id="file-index-html-LC29"><span class="pl-s2"><span class="pl-e">.y.axis</span> path {</span>
+</div><div class="line" id="file-index-html-LC30"><span class="pl-s2">  <span class="pl-mp"><span class="pl-s3">display</span></span>: <span class="pl-sc">none</span>;</span>
+</div><div class="line" id="file-index-html-LC31"><span class="pl-s2">}</span>
+</div><div class="line" id="file-index-html-LC32"><span class="pl-s2"></span>
+</div><div class="line" id="file-index-html-LC33"><span class="pl-s2"><span class="pl-c">/* This bit is referring to everything with the class &quot;line,&quot; which is different from above, </span></span>
+</div><div class="line" id="file-index-html-LC34"><span class="pl-s2"><span class="pl-c">where we applied style rules to svg line objects with the class &quot;axis.&quot; As you&#39;ll see below, the </span></span>
+</div><div class="line" id="file-index-html-LC35"><span class="pl-s2"><span class="pl-c">object with the class, &quot;line&quot; is the line of the line chart itself. Again, you need to add a </span></span>
+</div><div class="line" id="file-index-html-LC36"><span class="pl-s2"><span class="pl-c">stroke color. I&#39;ve changed the width to 2 pixels from the default 1 pixel. Also, notice that the </span></span>
+</div><div class="line" id="file-index-html-LC37"><span class="pl-s2"><span class="pl-c">shape-rendering is not set to crispEdges because this is a curve. */</span></span>
+</div><div class="line" id="file-index-html-LC38"><span class="pl-s2"><span class="pl-e">.line</span> {</span>
+</div><div class="line" id="file-index-html-LC39"><span class="pl-s2">  <span class="pl-mp"><span class="pl-s3">fill</span></span>: <span class="pl-sc">none</span>;</span>
+</div><div class="line" id="file-index-html-LC40"><span class="pl-s2">  <span class="pl-mp">stroke</span>: <span class="pl-id">darkmagenta</span>;</span>
+</div><div class="line" id="file-index-html-LC41"><span class="pl-s2">  <span class="pl-mp">stroke-<span class="pl-s3">width</span></span>: <span class="pl-c1">2<span class="pl-k">px</span></span>;</span>
+</div><div class="line" id="file-index-html-LC42"><span class="pl-s2">}</span>
+</div><div class="line" id="file-index-html-LC43"><span class="pl-s2"></span>
+</div><div class="line" id="file-index-html-LC44"><span class="pl-s2">&lt;/<span class="pl-ent">style</span>&gt;</span>
+</div><div class="line" id="file-index-html-LC45">&lt;<span class="pl-ent">body</span>&gt;
+</div><div class="line" id="file-index-html-LC46">  <span class="pl-c">&lt;!-- You always want to put your script (or your reference to it) inside the body of your HTML. --&gt;</span>
+</div><div class="line" id="file-index-html-LC47">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">&quot;</span>http://d3js.org/d3.v3.js<span class="pl-pds">&quot;</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+</div><div class="line" id="file-index-html-LC48"><span class="pl-s2">&lt;<span class="pl-ent">script</span>&gt;</span>
+</div><div class="line" id="file-index-html-LC49"><span class="pl-s2"></span>
+</div><div class="line" id="file-index-html-LC50"><span class="pl-s2"><span class="pl-c">// Set up your margins the Bostock way! Bostock always creates a JavaScript object called margin </span></span>
+</div><div class="line" id="file-index-html-LC51"><span class="pl-s2"><span class="pl-c">// with the properties top, right, bottom, and left (pretty self-explanatory). He then defines </span></span>
+</div><div class="line" id="file-index-html-LC52"><span class="pl-s2"><span class="pl-c">// the variables width and the height based on the dimensions inside of those margins. The 960px </span></span>
+</div><div class="line" id="file-index-html-LC53"><span class="pl-s2"><span class="pl-c">// and 500px here are the overall width and height, respectively — this is the standard size of </span></span>
+</div><div class="line" id="file-index-html-LC54"><span class="pl-s2"><span class="pl-c">// a block. These variables will be used to define the size of the SVG element (as you&#39;ll see </span></span>
+</div><div class="line" id="file-index-html-LC55"><span class="pl-s2"><span class="pl-c">// below).</span></span>
+</div><div class="line" id="file-index-html-LC56"><span class="pl-s2"><span class="pl-s">var</span> margin <span class="pl-k">=</span> {top<span class="pl-k">:</span> <span class="pl-c1">20</span>, right<span class="pl-k">:</span> <span class="pl-c1">20</span>, bottom<span class="pl-k">:</span> <span class="pl-c1">30</span>, left<span class="pl-k">:</span> <span class="pl-c1">50</span>},</span>
+</div><div class="line" id="file-index-html-LC57"><span class="pl-s2">    width <span class="pl-k">=</span> <span class="pl-c1">960</span> <span class="pl-k">-</span> margin.<span class="pl-sc">left</span> <span class="pl-k">-</span> margin.<span class="pl-sc">right</span>,</span>
+</div><div class="line" id="file-index-html-LC58"><span class="pl-s2">    height <span class="pl-k">=</span> <span class="pl-c1">500</span> <span class="pl-k">-</span> margin.<span class="pl-sc">top</span> <span class="pl-k">-</span> margin.<span class="pl-sc">bottom</span>;</span>
+</div><div class="line" id="file-index-html-LC59"><span class="pl-s2"></span>
+</div><div class="line" id="file-index-html-LC60"><span class="pl-s2"><span class="pl-c">// This is a helper function that turns a string representing a date into an actual date object </span></span>
+</div><div class="line" id="file-index-html-LC61"><span class="pl-s2"><span class="pl-c">// that JavaScript can understand. The &quot;%d/%m/%Y&quot; bit tells D3 how your raw date data is </span></span>
+</div><div class="line" id="file-index-html-LC62"><span class="pl-s2"><span class="pl-c">// formatted. %m is the month (as a number), %d is the day of the month, and %Y is the four-</span></span>
+</div><div class="line" id="file-index-html-LC63"><span class="pl-s2"><span class="pl-c">// digit year. The D3 API reference has a list of more of these so-called directives.</span></span>
+</div><div class="line" id="file-index-html-LC64"><span class="pl-s2"><span class="pl-s">var</span> parseDate <span class="pl-k">=</span> d3<span class="pl-s3">.time</span>.format(<span class="pl-s1"><span class="pl-pds">&quot;</span>%m/%d/%Y<span class="pl-pds">&quot;</span></span>).parse;</span>
+</div><div class="line" id="file-index-html-LC65"><span class="pl-s2"></span>
+</div><div class="line" id="file-index-html-LC66"><span class="pl-s2"><span class="pl-c">// Create a time scale for the horiztonal or x-axis. Time scales take date objects as inputs and </span></span>
+</div><div class="line" id="file-index-html-LC67"><span class="pl-s2"><span class="pl-c">// map them linearly to an output range. Here the output range is set to go from 0 to width. </span></span>
+</div><div class="line" id="file-index-html-LC68"><span class="pl-s2"><span class="pl-c">// Remember that the width variable includes everything inside of the left and right margins. </span></span>
+</div><div class="line" id="file-index-html-LC69"><span class="pl-s2"><span class="pl-c">// That means the x-axis will span that entire distance and but up against both of the margins. </span></span>
+</div><div class="line" id="file-index-html-LC70"><span class="pl-s2"><span class="pl-c">// Because the input (domain) depends on the data, it is defined below, inside of the d3.tsv() </span></span>
+</div><div class="line" id="file-index-html-LC71"><span class="pl-s2"><span class="pl-c">// function, where the data is called in.</span></span>
+</div><div class="line" id="file-index-html-LC72"><span class="pl-s2"><span class="pl-s">var</span> x <span class="pl-k">=</span> d3<span class="pl-s3">.time</span>.scale()</span>
+</div><div class="line" id="file-index-html-LC73"><span class="pl-s2">    .range([<span class="pl-c1">0</span>, width]);</span>
+</div><div class="line" id="file-index-html-LC74"><span class="pl-s2"></span>
+</div><div class="line" id="file-index-html-LC75"><span class="pl-s2"><span class="pl-c">// Create a linear scale for the y-axis. This takes regular old numbers and maps them linearly </span></span>
+</div><div class="line" id="file-index-html-LC76"><span class="pl-s2"><span class="pl-c">// to an output range. Note that the range goes from height to 0, not the other way around. This </span></span>
+</div><div class="line" id="file-index-html-LC77"><span class="pl-s2"><span class="pl-c">// is because, on the web, the upper left-hand corner of the page is 0,0 and as you move down, y </span></span>
+</div><div class="line" id="file-index-html-LC78"><span class="pl-s2"><span class="pl-c">// increases. In charts, however, you want y to increase as you move up the page. So the range </span></span>
+</div><div class="line" id="file-index-html-LC79"><span class="pl-s2"><span class="pl-c">// has to be reversed.</span></span>
+</div><div class="line" id="file-index-html-LC80"><span class="pl-s2"><span class="pl-s">var</span> y <span class="pl-k">=</span> d3.scale.linear()</span>
+</div><div class="line" id="file-index-html-LC81"><span class="pl-s2">    .range([height, <span class="pl-c1">0</span>]);</span>
+</div><div class="line" id="file-index-html-LC82"><span class="pl-s2"></span>
+</div><div class="line" id="file-index-html-LC83"><span class="pl-s2"><span class="pl-c">// xAxis and yAxis are super handy axis generators. They depend on their respective scales are </span></span>
+</div><div class="line" id="file-index-html-LC84"><span class="pl-s2"><span class="pl-c">// will be used below to automatically create default axes. Orient tells the axis where to put </span></span>
+</div><div class="line" id="file-index-html-LC85"><span class="pl-s2"><span class="pl-c">// the labels relative to the tick marks — bottom means the labels go below the tick marks and </span></span>
+</div><div class="line" id="file-index-html-LC86"><span class="pl-s2"><span class="pl-c">// left means they go to the left.</span></span>
+</div><div class="line" id="file-index-html-LC87"><span class="pl-s2"><span class="pl-s">var</span> xAxis <span class="pl-k">=</span> d3.svg.<span class="pl-sc">axis</span>()</span>
+</div><div class="line" id="file-index-html-LC88"><span class="pl-s2">    .scale(x)</span>
+</div><div class="line" id="file-index-html-LC89"><span class="pl-s2">    .orient(<span class="pl-s1"><span class="pl-pds">&quot;</span>bottom<span class="pl-pds">&quot;</span></span>);</span>
+</div><div class="line" id="file-index-html-LC90"><span class="pl-s2"></span>
+</div><div class="line" id="file-index-html-LC91"><span class="pl-s2"><span class="pl-s">var</span> yAxis <span class="pl-k">=</span> d3.svg.<span class="pl-sc">axis</span>()</span>
+</div><div class="line" id="file-index-html-LC92"><span class="pl-s2">    .scale(y)</span>
+</div><div class="line" id="file-index-html-LC93"><span class="pl-s2">    .orient(<span class="pl-s1"><span class="pl-pds">&quot;</span>left<span class="pl-pds">&quot;</span></span>);</span>
+</div><div class="line" id="file-index-html-LC94"><span class="pl-s2"></span>
+</div><div class="line" id="file-index-html-LC95"><span class="pl-s2"><span class="pl-c">// This is a helper function for creating the life expectancy curve. In general, the curves that </span></span>
+</div><div class="line" id="file-index-html-LC96"><span class="pl-s2"><span class="pl-c">// you make in D3 will be SVG paths. Paths are pretty complex. Their shape is described by an </span></span>
+</div><div class="line" id="file-index-html-LC97"><span class="pl-s2"><span class="pl-c">// attribute called d — a string written in a code that is like a mini-language unto itself. </span></span>
+</div><div class="line" id="file-index-html-LC98"><span class="pl-s2"><span class="pl-c">// This helper function takes x and y inputs and then translates them into a string to set d </span></span>
+</div><div class="line" id="file-index-html-LC99"><span class="pl-s2"><span class="pl-c">// equal to. The x input here is the year, and the y input is the life expectancy. You have to </span></span>
+</div><div class="line" id="file-index-html-LC100"><span class="pl-s2"><span class="pl-c">// use an anonymous function to access each of them.</span></span>
+</div><div class="line" id="file-index-html-LC101"><span class="pl-s2"><span class="pl-s">var</span> line <span class="pl-k">=</span> d3.svg.line()</span>
+</div><div class="line" id="file-index-html-LC102"><span class="pl-s2">    .<span class="pl-sc">x</span>(<span class="pl-st">function</span>(<span class="pl-vpf">d</span>) { <span class="pl-k">return</span> x(d.year); })</span>
+</div><div class="line" id="file-index-html-LC103"><span class="pl-s2">    .<span class="pl-sc">y</span>(<span class="pl-st">function</span>(<span class="pl-vpf">d</span>) { <span class="pl-k">return</span> y(d.lifeExpectancy); });</span>
+</div><div class="line" id="file-index-html-LC104"><span class="pl-s2"></span>
+</div><div class="line" id="file-index-html-LC105"><span class="pl-s2"><span class="pl-c">// Here is where the margin convention above really comes into play. What Bostock does is he </span></span>
+</div><div class="line" id="file-index-html-LC106"><span class="pl-s2"><span class="pl-c">// creates an SVG element that is the size of the entire block - 960 pixels by 500 pixels (</span></span>
+</div><div class="line" id="file-index-html-LC107"><span class="pl-s2"><span class="pl-c">// notice that he adds the margins back to the width and height variables). Then he appends an </span></span>
+</div><div class="line" id="file-index-html-LC108"><span class="pl-s2"><span class="pl-c">// SVG group and translates it over to the left by a distance equal to the left margin and down </span></span>
+</div><div class="line" id="file-index-html-LC109"><span class="pl-s2"><span class="pl-c">// by a distance equal to the top margin. The variable svg actually refers to the group, not to </span></span>
+</div><div class="line" id="file-index-html-LC110"><span class="pl-s2"><span class="pl-c">// the parent svg element. Everything will be based around that group. One thing this does is </span></span>
+</div><div class="line" id="file-index-html-LC111"><span class="pl-s2"><span class="pl-c">// change the frame of reference. Now, 0,0 is in the upper left-hand corner inside of the </span></span>
+</div><div class="line" id="file-index-html-LC112"><span class="pl-s2"><span class="pl-c">// margins, instead of outside of them. Conveniently, however, if svg objects spill over into </span></span>
+</div><div class="line" id="file-index-html-LC113"><span class="pl-s2"><span class="pl-c">// the margins, they will still be displayed because it is still within the bounds of the </span></span>
+</div><div class="line" id="file-index-html-LC114"><span class="pl-s2"><span class="pl-c">// granddaddy SVG element. In fact, the axes will be placed in the margins.</span></span>
+</div><div class="line" id="file-index-html-LC115"><span class="pl-s2"><span class="pl-s">var</span> svg <span class="pl-k">=</span> d3.<span class="pl-s3">select</span>(<span class="pl-s1"><span class="pl-pds">&quot;</span>body<span class="pl-pds">&quot;</span></span>).append(<span class="pl-s1"><span class="pl-pds">&quot;</span>svg<span class="pl-pds">&quot;</span></span>)</span>
+</div><div class="line" id="file-index-html-LC116"><span class="pl-s2">    .attr(<span class="pl-s1"><span class="pl-pds">&quot;</span>width<span class="pl-pds">&quot;</span></span>, width <span class="pl-k">+</span> margin.<span class="pl-sc">left</span> <span class="pl-k">+</span> margin.<span class="pl-sc">right</span>)</span>
+</div><div class="line" id="file-index-html-LC117"><span class="pl-s2">    .attr(<span class="pl-s1"><span class="pl-pds">&quot;</span>height<span class="pl-pds">&quot;</span></span>, height <span class="pl-k">+</span> margin.<span class="pl-sc">top</span> <span class="pl-k">+</span> margin.<span class="pl-sc">bottom</span>)</span>
+</div><div class="line" id="file-index-html-LC118"><span class="pl-s2">  .append(<span class="pl-s1"><span class="pl-pds">&quot;</span>g<span class="pl-pds">&quot;</span></span>)</span>
+</div><div class="line" id="file-index-html-LC119"><span class="pl-s2">    .attr(<span class="pl-s1"><span class="pl-pds">&quot;</span>transform<span class="pl-pds">&quot;</span></span>, <span class="pl-s1"><span class="pl-pds">&quot;</span>translate(<span class="pl-pds">&quot;</span></span> <span class="pl-k">+</span> margin.<span class="pl-sc">left</span> <span class="pl-k">+</span> <span class="pl-s1"><span class="pl-pds">&quot;</span>,<span class="pl-pds">&quot;</span></span> <span class="pl-k">+</span> margin.<span class="pl-sc">top</span> <span class="pl-k">+</span> <span class="pl-s1"><span class="pl-pds">&quot;</span>)<span class="pl-pds">&quot;</span></span>);</span>
+</div><div class="line" id="file-index-html-LC120"><span class="pl-s2"></span>
+</div><div class="line" id="file-index-html-LC121"><span class="pl-s2"><span class="pl-c">// This function pulls in the data. Data in D3 is loaded asynchronously, which means the rest of </span></span>
+</div><div class="line" id="file-index-html-LC122"><span class="pl-s2"><span class="pl-c">// the page is loaded first, just in case the data takes a while to load. As a result, </span></span>
+</div><div class="line" id="file-index-html-LC123"><span class="pl-s2"><span class="pl-c">// everything that your code needs to do that involves data has to happen within this d3.tsv() </span></span>
+</div><div class="line" id="file-index-html-LC124"><span class="pl-s2"><span class="pl-c">// function. Also, in case you were wondering, tsv is a file format and it stands for tab-</span></span>
+</div><div class="line" id="file-index-html-LC125"><span class="pl-s2"><span class="pl-c">// separated values. You can see in the data.tsv file below that the values are indeed separated </span></span>
+</div><div class="line" id="file-index-html-LC126"><span class="pl-s2"><span class="pl-c">// by tabs.</span></span>
+</div><div class="line" id="file-index-html-LC127"><span class="pl-s2">d3.tsv(<span class="pl-s1"><span class="pl-pds">&quot;</span>data.tsv<span class="pl-pds">&quot;</span></span>, <span class="pl-st">function</span>(<span class="pl-vpf">error</span>, <span class="pl-vpf">data</span>) {</span>
+</div><div class="line" id="file-index-html-LC128"><span class="pl-s2">  <span class="pl-c">// Note that when D3 pulls in a tsv file, it creates an array of objects. Each object has </span></span>
+</div><div class="line" id="file-index-html-LC129"><span class="pl-s2">  <span class="pl-c">// property names that correspond to the headers in the file - in this case &quot;year&quot; and </span></span>
+</div><div class="line" id="file-index-html-LC130"><span class="pl-s2">  <span class="pl-c">// &quot;lifeExpectancy.&quot; The array is assigned to a variable, called data in this case.</span></span>
+</div><div class="line" id="file-index-html-LC131"><span class="pl-s2"></span>
+</div><div class="line" id="file-index-html-LC132"><span class="pl-s2">  <span class="pl-c">// This self-contained loop iterates through each object in the data array and uses our helper </span></span>
+</div><div class="line" id="file-index-html-LC133"><span class="pl-s2">  <span class="pl-c">// function above to parse the raw data strings into actual JavaScript date objects. It also</span></span>
+</div><div class="line" id="file-index-html-LC134"><span class="pl-s2">  <span class="pl-c">// ensures that the life expectancy values are numbers and not strings.</span></span>
+</div><div class="line" id="file-index-html-LC135"><span class="pl-s2">  data.forEach(<span class="pl-st">function</span>(<span class="pl-vpf">d</span>) {</span>
+</div><div class="line" id="file-index-html-LC136"><span class="pl-s2">    d.year <span class="pl-k">=</span> parseDate(d.year);</span>
+</div><div class="line" id="file-index-html-LC137"><span class="pl-s2">    d.lifeExpectancy <span class="pl-k">=</span> <span class="pl-k">+</span>d.lifeExpectancy;</span>
+</div><div class="line" id="file-index-html-LC138"><span class="pl-s2">  });</span>
+</div><div class="line" id="file-index-html-LC139"><span class="pl-s2"></span>
+</div><div class="line" id="file-index-html-LC140"><span class="pl-s2">  <span class="pl-c">// The domain of the x scale is defined using the extent of the year data. That function d3.</span></span>
+</div><div class="line" id="file-index-html-LC141"><span class="pl-s2">  <span class="pl-c">// extent() returns an array of length 2, where the first entry is the minimum value and the </span></span>
+</div><div class="line" id="file-index-html-LC142"><span class="pl-s2">  <span class="pl-c">// second entry is the maximum value.</span></span>
+</div><div class="line" id="file-index-html-LC143"><span class="pl-s2">  x.<span class="pl-sc">domain</span>(d3.extent(data, <span class="pl-st">function</span>(<span class="pl-vpf">d</span>) { <span class="pl-k">return</span> d.year; }));</span>
+</div><div class="line" id="file-index-html-LC144"><span class="pl-s2"></span>
+</div><div class="line" id="file-index-html-LC145"><span class="pl-s2">  <span class="pl-c">// For the y domain, instead of using the extent, I&#39;m setting the lower bound at a nice, even </span></span>
+</div><div class="line" id="file-index-html-LC146"><span class="pl-s2">  <span class="pl-c">// 50, and then computing the maximum for the upper bound.</span></span>
+</div><div class="line" id="file-index-html-LC147"><span class="pl-s2">  y.<span class="pl-sc">domain</span>([<span class="pl-c1">50</span>, d3.<span class="pl-s3">max</span>(data, <span class="pl-st">function</span>(<span class="pl-vpf">d</span>) { <span class="pl-k">return</span> d.lifeExpectancy; })]);</span>
+</div><div class="line" id="file-index-html-LC148"><span class="pl-s2"></span>
+</div><div class="line" id="file-index-html-LC149"><span class="pl-s2">  <span class="pl-c">// Append the x axis, and assign two classes - &quot;x&quot; and &quot;axis.&quot; Note that all you have to do is </span></span>
+</div><div class="line" id="file-index-html-LC150"><span class="pl-s2">  <span class="pl-c">// append a group, then you can use the call operator to call the x-axis generator and it will </span></span>
+</div><div class="line" id="file-index-html-LC151"><span class="pl-s2">  <span class="pl-c">// take care of the rest (by putting objects inside of that group). The default for the x-axis </span></span>
+</div><div class="line" id="file-index-html-LC152"><span class="pl-s2">  <span class="pl-c">// is to put it at the top, so you have to use transform to move the group to the bottom.</span></span>
+</div><div class="line" id="file-index-html-LC153"><span class="pl-s2">  svg.append(<span class="pl-s1"><span class="pl-pds">&quot;</span>g<span class="pl-pds">&quot;</span></span>)</span>
+</div><div class="line" id="file-index-html-LC154"><span class="pl-s2">      .attr(<span class="pl-s1"><span class="pl-pds">&quot;</span>class<span class="pl-pds">&quot;</span></span>, <span class="pl-s1"><span class="pl-pds">&quot;</span>x axis<span class="pl-pds">&quot;</span></span>)</span>
+</div><div class="line" id="file-index-html-LC155"><span class="pl-s2">      .attr(<span class="pl-s1"><span class="pl-pds">&quot;</span>transform<span class="pl-pds">&quot;</span></span>, <span class="pl-s1"><span class="pl-pds">&quot;</span>translate(0,<span class="pl-pds">&quot;</span></span> <span class="pl-k">+</span> height <span class="pl-k">+</span> <span class="pl-s1"><span class="pl-pds">&quot;</span>)<span class="pl-pds">&quot;</span></span>)</span>
+</div><div class="line" id="file-index-html-LC156"><span class="pl-s2">      .<span class="pl-s3">call</span>(xAxis);</span>
+</div><div class="line" id="file-index-html-LC157"><span class="pl-s2"></span>
+</div><div class="line" id="file-index-html-LC158"><span class="pl-s2">  <span class="pl-c">// Create y axis and add label. When you append a text label to the axis, the point of </span></span>
+</div><div class="line" id="file-index-html-LC159"><span class="pl-s2">  <span class="pl-c">// reference is the axis group itself. </span></span>
+</div><div class="line" id="file-index-html-LC160"><span class="pl-s2">  svg.append(<span class="pl-s1"><span class="pl-pds">&quot;</span>g<span class="pl-pds">&quot;</span></span>)</span>
+</div><div class="line" id="file-index-html-LC161"><span class="pl-s2">      .attr(<span class="pl-s1"><span class="pl-pds">&quot;</span>class<span class="pl-pds">&quot;</span></span>, <span class="pl-s1"><span class="pl-pds">&quot;</span>y axis<span class="pl-pds">&quot;</span></span>)</span>
+</div><div class="line" id="file-index-html-LC162"><span class="pl-s2">      .<span class="pl-s3">call</span>(yAxis)</span>
+</div><div class="line" id="file-index-html-LC163"><span class="pl-s2">    .append(<span class="pl-s1"><span class="pl-pds">&quot;</span>text<span class="pl-pds">&quot;</span></span>)</span>
+</div><div class="line" id="file-index-html-LC164"><span class="pl-s2">      .attr(<span class="pl-s1"><span class="pl-pds">&quot;</span>transform<span class="pl-pds">&quot;</span></span>, <span class="pl-s1"><span class="pl-pds">&quot;</span>rotate(-90)<span class="pl-pds">&quot;</span></span>)</span>
+</div><div class="line" id="file-index-html-LC165"><span class="pl-s2">      .attr(<span class="pl-s1"><span class="pl-pds">&quot;</span>y<span class="pl-pds">&quot;</span></span>, <span class="pl-c1">6</span>)</span>
+</div><div class="line" id="file-index-html-LC166"><span class="pl-s2">      .attr(<span class="pl-s1"><span class="pl-pds">&quot;</span>dy<span class="pl-pds">&quot;</span></span>, <span class="pl-s1"><span class="pl-pds">&quot;</span>.71em<span class="pl-pds">&quot;</span></span>)</span>
+</div><div class="line" id="file-index-html-LC167"><span class="pl-s2">      .<span class="pl-sc">style</span>(<span class="pl-s1"><span class="pl-pds">&quot;</span>text-anchor<span class="pl-pds">&quot;</span></span>, <span class="pl-s1"><span class="pl-pds">&quot;</span>end<span class="pl-pds">&quot;</span></span>)</span>
+</div><div class="line" id="file-index-html-LC168"><span class="pl-s2">      .<span class="pl-sc">text</span>(<span class="pl-s1"><span class="pl-pds">&quot;</span>years<span class="pl-pds">&quot;</span></span>);</span>
+</div><div class="line" id="file-index-html-LC169"><span class="pl-s2"></span>
+</div><div class="line" id="file-index-html-LC170"><span class="pl-s2">  <span class="pl-c">// Create the path for your curve. In this case, we can use .datum() instead of .data(). The </span></span>
+</div><div class="line" id="file-index-html-LC171"><span class="pl-s2">  <span class="pl-c">// difference is subtle. Both bind data to objects (or more precisely to selections). But when </span></span>
+</div><div class="line" id="file-index-html-LC172"><span class="pl-s2">  <span class="pl-c">// .data() binds data to a selection, it computes a data-join, which, among other things, </span></span>
+</div><div class="line" id="file-index-html-LC173"><span class="pl-s2">  <span class="pl-c">// allows you to easily create a new SVG object for every data point in your array. .datum() </span></span>
+</div><div class="line" id="file-index-html-LC174"><span class="pl-s2">  <span class="pl-c">// does not do this - it only binds data. But it works in this case, because you only need a </span></span>
+</div><div class="line" id="file-index-html-LC175"><span class="pl-s2">  <span class="pl-c">// single path for your line. Every data point in your data set, instead of getting turned </span></span>
+</div><div class="line" id="file-index-html-LC176"><span class="pl-s2">  <span class="pl-c">// into a separate line, will be translated into SVG path-speak by the helper function above, (</span></span>
+</div><div class="line" id="file-index-html-LC177"><span class="pl-s2">  <span class="pl-c">// called line). This SVG path speak is used to set the &quot;d&quot; attribute for the path and </span></span>
+</div><div class="line" id="file-index-html-LC178"><span class="pl-s2">  <span class="pl-c">// generate the curve.</span></span>
+</div><div class="line" id="file-index-html-LC179"><span class="pl-s2">  svg.append(<span class="pl-s1"><span class="pl-pds">&quot;</span>path<span class="pl-pds">&quot;</span></span>)</span>
+</div><div class="line" id="file-index-html-LC180"><span class="pl-s2">      .datum(data)</span>
+</div><div class="line" id="file-index-html-LC181"><span class="pl-s2">      .attr(<span class="pl-s1"><span class="pl-pds">&quot;</span>class<span class="pl-pds">&quot;</span></span>, <span class="pl-s1"><span class="pl-pds">&quot;</span>line<span class="pl-pds">&quot;</span></span>)</span>
+</div><div class="line" id="file-index-html-LC182"><span class="pl-s2">      .attr(<span class="pl-s1"><span class="pl-pds">&quot;</span>d<span class="pl-pds">&quot;</span></span>, line);</span>
+</div><div class="line" id="file-index-html-LC183"><span class="pl-s2">});</span>
+</div><div class="line" id="file-index-html-LC184"><span class="pl-s2"></span>
+</div><div class="line" id="file-index-html-LC185"><span class="pl-s2">&lt;/<span class="pl-ent">script</span>&gt;</span>
+</div></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+            <div id="file-readme-md" class="file ">
+    <a href="/ritchieking/8503838" class="link-overlay">
+    <span class="link">View <strong>data.tsv</strong> <span class="octicon octicon-arrow-right"></span></span>
+  </a>
+  <div class="meta clearfix">
+    <div class="info file-name">
+      <span class="icon">
+        <b class="octicon octicon-gist"></b>
+      </span>
+      <a aria-label="Permalink" href="#file-readme-md" class="tooltipped tooltipped-s permalink"><strong class="file-name js-selectable-text">readme.md</strong></a>
+    </div>
+    <div class="actions">
+      <div class="button-group">
+        <a aria-label="View Raw"
+          href="/ritchieking/8503838/raw/09639a00ffe8502c6ee952fa8c039377ac2aaa00/readme.md"
+          data-skip-pjax class="minibutton raw-url js-view-raw">Raw</a>
+      </div>
+    </div>
+  </div>
+  <div class="suppressed">
+    <a class="js-show-suppressed-file">File suppressed. Click to show.</a>
+  </div>
+  <div class="blob-wrapper data type-markdown js-blob-data">
+    
+
+    <div class="readme context-loader-container context-loader-overlay">
+      <article class="markdown-body js-file "
+        data-task-list-update-url="https://gist.github.com/ritchieking/8503838/file/readme.md">
+        <p>Howdy, and welcome to this block! Its purpose is to help you learn to make a line chart using D3. The curve above shows the life expectancy for the entire world over time. The data come from the World Bank. </p>
+
+<p>The code itself is ripped almost entirely from Mike Bostock's <a href="http://bl.ocks.org/mbostock/3883245" rel="noreferrer">Line Chart block</a>. But the data is different (just to mix things up a bit) and the code itself is heavily commented with explanations of what it's actually doing. I hope that it helps. You can also find a <a href="http://bl.ocks.org/ritchieking/8505213" rel="noreferrer">clean version here</a>.</p>
+
+<p>I also hope to do a series of these, so stay tuned!</p>
+
+      </article>
+    </div>
+
+
+
+  </div>
+</div>
+
+            <div id="file-thumbnail-png" class="file ">
+    <a href="/ritchieking/8503838" class="link-overlay">
+    <span class="link">View <strong>data.tsv</strong> <span class="octicon octicon-arrow-right"></span></span>
+  </a>
+  <div class="meta clearfix">
+    <div class="info file-name">
+      <span class="icon">
+        <b class="octicon octicon-file-media"></b>
+      </span>
+      <a aria-label="Permalink" href="#file-thumbnail-png" class="tooltipped tooltipped-s permalink"><strong class="file-name js-selectable-text">thumbnail.png</strong></a>
+    </div>
+    <div class="actions">
+      <div class="button-group">
+        <a aria-label="View Raw"
+          href="/ritchieking/8503838/raw/17d928ff9f62dd18fd41e8756b91e8bf5322b7b8/thumbnail.png"
+          data-skip-pjax class="minibutton raw-url js-view-raw">Raw</a>
+      </div>
+    </div>
+  </div>
+  <div class="suppressed">
+    <a class="js-show-suppressed-file">File suppressed. Click to show.</a>
+  </div>
+  <div class="blob-wrapper data type-text js-blob-data">
+    
+      <div class="image js-image">
+        <span class="border-wrap"><img alt="Thumbnail" src="https://gist.github.com/ritchieking/8503838/raw/17d928ff9f62dd18fd41e8756b91e8bf5322b7b8/thumbnail.png" /></span>
+      </div>
+
+
+
+
+  </div>
+</div>
+
+
+        <div class="discussion-timeline js-quote-selection-container">
+
+          <div class="js-discussion">
+            
+          </div>
+
+          <div class="discussion-timeline-actions">
+              <div class="signed-out-comment">
+	<a class="button primary" href="https://github.com/signup?return_to=gist" rel="nofollow">Sign up for free</a>
+	<strong>to join this conversation on GitHub</strong>.
+	Already have an account?
+  <a href="https://gist.github.com/login?return_to=%2Fritchieking%2F8503838" rel="nofollow">Sign in to comment</a>
+</div>
+
+
+          </div>
+        </div><!-- /.discussion-timeline -->
+      </div><!-- /.gist-content -->
+    </div>
+  </div>
+</div><!-- /.container -->
+
+  <div class="context-overlay"></div>
+</div>
+
+    </div>
+    <div class="slow-loading-overlay"></div>
+  </div>
+
+  <div id="ajax-error-message" class="flash flash-error">
+    <div class="container">
+      <span class="octicon octicon-alert"></span>
+      Something went wrong with that request. Please try again.
+      <a href="#" class="octicon octicon-x ajax-error-dismiss"></a>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="container">
+  <div class="site-footer">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="http://developer.github.com">API</a></li>
+      <li><a href="https://github.com/blog">Blog</a></li>
+      <li><a href="https://github.com/about">About</a></li>
+
+    </ul>
+
+    <a href="/">
+      <span class="mega-octicon octicon-mark-github" title="GitHub "></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>&copy; 2015 <span title="0.03111s from github-fe102-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy">Privacy</a></li>
+        <li><a href="https://github.com/security">Security</a></li>
+        <li><a href="https://github.com/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+  </footer>
+
+  <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-fullscreen-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="fullscreen-contents js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
+        <div class="suggester-container">
+            <div class="suggester fullscreen-suggester js-navigation-container" id="fullscreen_suggester"
+                data-url="/ritchieking/8503838/suggestions">
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" aria-label="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped tooltipped-w"
+      aria-label="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+</body>
+</html>
