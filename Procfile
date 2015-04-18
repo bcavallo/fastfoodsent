@@ -1,1 +1,1 @@
-web: gunicorn mcsite:app --log-file= -
+web: gunicorn mcsite:app --log-file=-
