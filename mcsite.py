@@ -85,18 +85,17 @@ def good_and_bad_tweets():
 @app.route('/')
 def index():
         times, avgs = grab_data('mcdonalds')
-	bk_times, bk_avgs = grab_data('burger king')
 	st_times, st_avgs = grab_data('starbucks')
 	ch_times, ch_avgs = grab_data('chipotle')
 	ta_times, ta_avgs = grab_data('taco bell')
 	kfc_times, kfc_avgs = grab_data('kfc')
-	return render_template("hello.html", times=times, avgs=avgs, bk_times=bk_times, bk_avgs=bk_avgs,
+	return render_template("hello.html", times=times, avgs=avgs,
 		st_times=st_times, st_avgs=st_avgs, ch_times=ch_times, ch_avgs=ch_avgs, ta_times=ta_times,
 		ta_avgs=ta_avgs, kfc_times=kfc_times, kfc_avgs=kfc_avgs)	
 
 	
 
 if __name__ == '__main__':
-	app.run() #host='0.0.0.0', debug=True)
+	app.run(host='0.0.0.0', debug=True)
 
 

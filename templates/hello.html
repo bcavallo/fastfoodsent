@@ -29,14 +29,17 @@
     </div>
   </div>
 </nav>
-<!-- <h2 class="col-md-12">Fast Food Twitter Sentiment</h2>
-<p class="col-md-8">The chart below displays the sentiment index of a given fast food restaurant
+<h2 class="col-md-12">Fast Food Twitter Sentiment</h2>
+<p class="col-md-12">The chart below displays the sentiment index of a given fast food restaurant
 over the past 24 hours.  This index is calculated as the ratio of positive tweets
-to total number of tweets in the past hour.  Additionally, clicking on any data
-point on the chart, a collection of positive and negative tweets from the last 10 
-minutes will be displayed.</p> -->
+to total number of tweets from the previous hour.  Selecting any data point on the chart will display a collection of positive and negative tweets from the 10 minutes prior to the selected value.</p>
 </script>
+<div class="col-md-12"></div>
+<div class="col-md-12"></div>
+<div class="col-md-12"></div>
+<div class="col-md-12">
 <div id="chart" style="padding-right:1cm;"></div>
+</div>
 <div class="col-md-6">
 <h3>Negative Tweets</h3>
 <ul  id="bad">
@@ -58,10 +61,8 @@ minutes will be displayed.</p> -->
 {% autoescape false %}
 var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }}
 
-var times = {{ times | tojson | safe}}
-var avgs = {{ avgs | tojson | safe }}
-var bk_times = {{ bk_times | tojson | safe }}
-var bk_avgs = {{ bk_avgs | tojson | safe }}
+var mc_times = {{ times | tojson | safe}}
+var mc_avgs = {{ avgs | tojson | safe }}
 var st_times = {{ st_times | tojson | safe }}
 var st_avgs = {{ st_avgs | tojson | safe }}
 var ch_times = {{ ch_times | tojson | safe }}
@@ -74,20 +75,23 @@ var kfc_avgs = {{ kfc_avgs | tojson | safe }}
 
 var chart = c3.generate({
     bindto: '#chart',
+    padding: {
+	top: 10,
+	bottom: 10,
+	left: 50,
+	right: 5
+    },
     data: {
 	xs: {
-	    "McDonald's": 'time',
-	    "Burger King": 'bktime',
+	    "McDonald's": 'mc_times',
 	    "Starbucks": 'st_times',
 	    "Chipotle": 'ch_times',
 	    "Taco Bell": 'ta_times',
 	    "KFC": 'kfc_times',
             },
 	columns: [
-		['time'].concat(times),
-		["McDonald's"].concat(avgs),
-		['bktime'].concat(bk_times),
-		["Burger King"].concat(bk_avgs),
+		['mc_times'].concat(mc_times),
+		["McDonald's"].concat(mc_avgs),
 		['st_times'].concat(st_times),
 		['Starbucks'].concat(st_avgs),
 		['ch_times'].concat(ch_times),
@@ -97,7 +101,7 @@ var chart = c3.generate({
 		['kfc_times'].concat(kfc_times),
 		['KFC'].concat(kfc_avgs)
         ],
-	hide: ['Starbucks', 'Chipotle', 'Taco Bell', 'KFC'],
+	hide: ['Chipotle', 'Taco Bell', 'KFC'],
 	selection: {
 	    enabled: true,
 	    multiple: false
@@ -108,7 +112,6 @@ var chart = c3.generate({
 	        ts: Date.parse(d.x) / 1000
 	   }, function(data) {
 	      var bad = data['bad']
-	      console.log(twemoji.parse(bad[0]))
 	      var good = data['good']
 	      for (i = 0; i < bad.length; i++) {
 		  $("#bad li:nth-child(" + String(i + 1) + ")").html(twemoji.parse(JSON.parse('"' + bad[i] + '"')));
@@ -122,25 +125,39 @@ var chart = c3.generate({
 	onunselected: function (d) {
 	      $('#good li').empty();
 	      $('#bad li').empty();
+	},
+	colors: {
+	   "McDonald's": '#FF4747',
+	   "Starbucks": '#005C00',
+	   "Chipotle": '#993333',
+	   "Taco Bell": '#005CE6',
+	   "KFC": '#E68A00'
 	}
     },
     point: {
 	show: false
     },
     tooltip: {
+//	format: {
+//	  title: function (x) { return Date(x) } 
+//	},
 	grouped: false
     },
     axis: {
 	x: {
 	   type: 'timeseries',
 	   tick: {
-		format: '%I:%M %p',
+		format: '%I:%M %p \n %m/%d',
 		fit: false
 	   },
-	   min: times[0],
-	   max: times[times.length - 1]
+	   min: mc_times[0],
+	   max: mc_times[mc_times.length - 1]
 	},
 	y: {
+	   label: {
+	        text: "Tweet Sentiment Index",
+		position: "outer-middle"
+	   },
 	   tick: {
 		format: d3.format(".02f")
 	   }

@@ -18,7 +18,7 @@ nltk.data.path.append("/home/vagrant/flask_site/nltk_data")
 cv = joblib.load('/home/vagrant/flask_site/classifiers/cv.pkl')
 nb = joblib.load('/home/vagrant/flask_site/classifiers/nb.pkl')
 
-my_stop = stopwords.words('english') + ['mcdonalds','burger king', \
+my_stop = stopwords.words('english') + ['mcdonalds','pizza hut', \
 	'starbucks','taco bell','chipotle','kfc', 'rt', 'http', 'https']
 
 def round_ten_min(n):
@@ -50,7 +50,7 @@ class listener(StreamListener):
 		cur.execute("INSERT INTO mctweets (time, time_adj, text, text_cleaned, \
 		sents, prob) VALUES (%s, %s, %s, %s, %s, %s)", (created, created_adj, \
 		tweet, clean_tweet, sent, prob))
-		cur.execute("DELETE FROM mctweets WHERE time < %s;", [created - 86401])
+		cur.execute("DELETE FROM mctweets WHERE time < %s;", [created - 90001])
 	    	conn.commit()
             return True
         except BaseException, e:
@@ -64,5 +64,5 @@ class listener(StreamListener):
         print status
 
 twitterStream = Stream(auth, listener())
-twitterStream.filter(track=['mcdonalds', 'burger king', 'starbucks', 'chipotle', 'taco bell', 'kfc'], languages=['en'])
+twitterStream.filter(track=['mcdonalds', 'pizza hut', 'starbucks', 'chipotle', 'taco bell', 'kfc'], languages=['en'])
 #'wendys', 'chipotle', 'shake shack', 'taco bell', 'kfc', 'pizza hut', 'dominos pizza', 'five guys', 'in-n-out', 'whataburger', 'starbucks', 'dunkin donuts', 'panera', 'arbys', 'popeyes', 'boston market'])
