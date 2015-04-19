@@ -43,9 +43,8 @@ class listener(StreamListener):
 	    if lang == 'en':
 		created = int(time.time())
 	    	created_adj = round_ten_min(created)
-            	clean_tweet = re.sub("[^\w\s]", "", tweet.lower())
-		print type(clean_tweet)
-		print rem_stop_words(clean_tweet)
+		clean_tweet = re.sub("^rt\s@.+:\s","", tweet.lower())
+            	clean_tweet = re.sub("[^\w\s]", "", clean_tweet)
 		sent = nb.predict(cv.transform([clean_tweet]))[0]
 		prob = nb.predict_proba(cv.transform([rem_stop_words(clean_tweet)]))[0][0]
 		cur.execute("INSERT INTO mctweets (time, time_adj, text, text_cleaned, \
