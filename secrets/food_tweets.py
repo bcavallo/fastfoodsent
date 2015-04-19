@@ -18,8 +18,8 @@ nltk.data.path.append("/home/vagrant/flask_site/nltk_data")
 cv = joblib.load('/home/vagrant/flask_site/classifiers/cv.pkl')
 nb = joblib.load('/home/vagrant/flask_site/classifiers/nb.pkl')
 
-my_stop = stopwords.words('english') + ['mcdonalds','pizza hut', \
-	'starbucks','taco bell','chipotle','kfc', 'rt', 'http', 'https']
+my_stop = stopwords.words('english') + [u'mcdonalds',u'pizza hut', \
+	u'starbucks',u'taco bell',u'chipotle',u'kfc', u'rt']
 
 def round_ten_min(n):
 	return n - (n % 600) + 600
@@ -43,7 +43,9 @@ class listener(StreamListener):
 	    if lang == 'en':
 		created = int(time.time())
 	    	created_adj = round_ten_min(created)
-            	clean_tweet = re.sub("['@]", "", tweet.lower())
+            	clean_tweet = re.sub("[^\w\s]", "", tweet.lower())
+		print type(clean_tweet)
+		print rem_stop_words(clean_tweet)
 		sent = nb.predict(cv.transform([clean_tweet]))[0]
 		prob = nb.predict_proba(cv.transform([rem_stop_words(clean_tweet)]))[0][0]
 		cur.execute("INSERT INTO mctweets (time, time_adj, text, text_cleaned, \
