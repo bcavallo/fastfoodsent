@@ -6,7 +6,7 @@ argparse==1.2.1
 gunicorn==19.3.0
 itsdangerous==0.24
 nltk==3.0.2
-numpy==1.9.2
+numpy==1.8.2
 oauthlib==0.7.2
 psycopg2==2.6
 python-dateutil==2.4.2
