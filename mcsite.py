@@ -41,35 +41,21 @@ def grab_data(rest):
 
 app = Flask(__name__)
 
-'''
-@app.route('/_get_more')
-def more_data(rest):
-	time.sleep(1)
-	time_now = time.time()
-	conn = psycopg2.connect("dbname=testdb user=vagrant")
-        cur = conn.cursor()
-        data = pd.read_sql("select * from tweets where (text_clean like '%%%s%%') \
-        and (time < %s);" % (rest, (time_now)), conn)
-	conn.close()
-	new_sents = data.groupby(['time']).sent.sum()[-6:].sum()
-	new_counts = data.groupby(['time']).sent.count()[-6:].sum()
-	new_point = float(new_sents) / new_counts
-	new_time = time_now * 1000
-	return jsonify(coord=[new_time, new_point])
-'''
-
 @app.route('/_get_tweets')	
 def good_and_bad_tweets():
 	rest = re.sub("[']", "", request.args.get('rest', 0, type=str).lower())
 	ts = request.args.get('ts', 0, type=int)
 	conn = psycopg2.connect("dbname=fastfoodtweets user=vagrant")
         cur = conn.cursor()
-        data = pd.read_sql("select * from mctweets where (text like '%%%s%%') \
+        data = pd.read_sql("select * from mctweets where (text_cleaned like '%%%s%%') \
         and (time_adj = %s);" % (rest, ts), conn)
         conn.close()
-	foo = data.drop_duplicates(subset=['text_cleaned'])
-	good = foo[foo.sents == 1].sort(columns=['prob'])
-	bad = foo[foo.sents == 0].sort(columns=['prob'])
+	good = data[data.sents == 1].sort(columns=['prob'])
+	bad = data[data.sents == 0].sort(columns=['prob'])
+	num_good = len(good)
+	num_bad = len(bad)
+	good = good.drop_duplicates(subset=['text_cleaned'])
+	bad = bad.drop_duplicates(subset=['text_cleaned'])
 	if len(good) >= 3:
 		good = list(good.text.values[:3])
 	else:
@@ -80,7 +66,7 @@ def good_and_bad_tweets():
 		bad = list(bad.text.values)
 	print map(unicode, good)
 	print map(unicode, bad)
-        return jsonify(good=map(Markup, map(unicode,good)), bad=map(Markup,map(unicode,bad)))
+        return jsonify(good=good, bad=bad, num_good=num_good, num_bad=num_bad)
 
 @app.route('/')
 def index():

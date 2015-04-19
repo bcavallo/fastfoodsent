@@ -44,9 +44,8 @@ class listener(StreamListener):
 		created = int(time.time())
 	    	created_adj = round_ten_min(created)
             	clean_tweet = re.sub("['@]", "", tweet.lower())
-		clean_tweet = rem_stop_words(clean_tweet)
 		sent = nb.predict(cv.transform([clean_tweet]))[0]
-		prob = nb.predict_proba(cv.transform([clean_tweet]))[0][0]
+		prob = nb.predict_proba(cv.transform([rem_stop_words(clean_tweet)]))[0][0]
 		cur.execute("INSERT INTO mctweets (time, time_adj, text, text_cleaned, \
 		sents, prob) VALUES (%s, %s, %s, %s, %s, %s)", (created, created_adj, \
 		tweet, clean_tweet, sent, prob))

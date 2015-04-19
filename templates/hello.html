@@ -32,31 +32,13 @@
 <h2 class="col-md-12">Fast Food Twitter Sentiment</h2>
 <p class="col-md-12">The chart below displays the sentiment index of a given fast food restaurant
 over the past 24 hours.  This index is calculated as the ratio of positive tweets
-to total number of tweets from the previous hour.  Selecting any data point on the chart will display a collection of positive and negative tweets from the 10 minutes prior to the selected value.</p>
+to total number of tweets from the previous hour.  Selecting any data point on the chart will display aselection of positive and negative tweets from the 10 minutes prior to the selected value in addition to the total number of negative and positive tweets from that time period.</p>
 </script>
-<div class="col-md-12"></div>
-<div class="col-md-12"></div>
-<div class="col-md-12"></div>
 <div class="col-md-12">
 <div id="chart" style="padding-right:1cm;"></div>
 </div>
-<div class="col-md-6">
-<h3>Negative Tweets</h3>
-<ul  id="bad">
-<li class='col-md-12' style="word-wrap:break-word;"></li>
-<li class='col-md-12' style="word-wrap:break-word;"></li>
-<li class='col-md-12' style="word-wrap:break-word;"></li>
-</ul>
-</div>
-
-<div class="col-md-6">
-<h3>Positive Tweets</h3>
-<ul id="good">
-<li class='col-md-12' style="word-wrap:break-word;"></li>
-<li class='col-md-12' style="word-wrap:break-word;"></li>
-<li class='col-md-12' style="word-wrap:break-word;"></li>
-</ul>
-</div>
+<div class="col-md-6" id="bad"></div>
+<div class="col-md-6" id="good"></div>
 <script>
 {% autoescape false %}
 var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }}
@@ -113,18 +95,26 @@ var chart = c3.generate({
 	   }, function(data) {
 	      var bad = data['bad']
 	      var good = data['good']
+	      var bad_list = '<h3>Negative Tweets</h3><span style="color:blue;"> Total Negative: ' +
+				String(data['num_bad']) + '</span>'
+	      var good_list = '<h3>Positive Tweets</h3><span style="color:blue;"> Total Positive: ' +
+				String(data['num_good']) + '</span>'
 	      for (i = 0; i < bad.length; i++) {
-		  $("#bad li:nth-child(" + String(i + 1) + ")").html(twemoji.parse(JSON.parse('"' + bad[i] + '"')));
+		  bad_list = bad_list + "<li class='col-md-12' style='word-wrap:break-word;'>" + 
+		  String(twemoji.parse(JSON.parse('"' + bad[i] + '"'))) + "</li>"
 	      }
+	      $("#bad").html('<ul>' + bad_list + '</ul>');
 	      for (i = 0; i < good.length; i++) {
-		  $("#good li:nth-child(" + String(i + 1) + ")").html(twemoji.parse(JSON.parse('"' + good[i] + '"')));
+		  good_list = good_list + "<li class='col-md-12' style='word-wrap:break-word;'>" + 
+		  String(twemoji.parse(JSON.parse('"' + good[i] + '"'))) + "</li>"
 	      }
+	      $("#good").html('<ul>' + good_list + '</ul>');
 	   });
 	   return false;
 	},
 	onunselected: function (d) {
-	      $('#good li').empty();
-	      $('#bad li').empty();
+	      $('#good ul').empty();
+	      $('#bad ul').empty();
 	},
 	colors: {
 	   "McDonald's": '#FF4747',
