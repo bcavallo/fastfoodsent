@@ -33,7 +33,6 @@ def grab_data(rest):
 	and (time_adj < %s);" % (rest, (time_now)), conn)
 	conn.close()
 	data['c_times'] = data['time_adj'] * 1000
-	#avgs = data.groupby(['c_times']).correct_sent.mean().apply(lambda x: format(x, '.3f'))
 	counts = data.groupby(['c_times']).sents.count()
 	sums = data.groupby(['c_times']).sents.sum()
 	return (sorted(list(data.c_times.unique()))[6:], list(running_avg(sums, counts, 6))) 
@@ -74,10 +73,13 @@ def index():
 	st_times, st_avgs = grab_data('starbucks')
 	ch_times, ch_avgs = grab_data('chipotle')
 	ta_times, ta_avgs = grab_data('taco bell')
+	ph_times, ph_avgs = grab_data('pizza hut')
 	kfc_times, kfc_avgs = grab_data('kfc')
 	return render_template("hello.html", times=times, avgs=avgs,
-		st_times=st_times, st_avgs=st_avgs, ch_times=ch_times, ch_avgs=ch_avgs, ta_times=ta_times,
-		ta_avgs=ta_avgs, kfc_times=kfc_times, kfc_avgs=kfc_avgs)	
+		st_times=st_times, st_avgs=st_avgs, ch_times=ch_times, \
+		ch_avgs=ch_avgs, ta_times=ta_times, ta_avgs=ta_avgs, \
+		ph_times=ph_times, ph_avgs=ph_avgs, kfc_times=kfc_times, \
+		kfc_avgs=kfc_avgs)	
 
 	
 
