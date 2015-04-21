@@ -100,9 +100,15 @@ def index():
 		ph_times=ph_times, ph_avgs=ph_avgs, kfc_times=kfc_times, \
 		kfc_avgs=kfc_avgs)	
 
+@app.route('/about')
+def about():
+	return render_template("about.html")
 	
+@app.route('/analysis')
+def analysis():
+	return render_template("analysis.html")
 
 if __name__ == '__main__':
-	app.run(host='0.0.0.0', debug=True)
+	app.run(host='0.0.0.0')
 
 

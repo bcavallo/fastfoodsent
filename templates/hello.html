@@ -1,34 +1,5 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<!-- Load css -->
-<link href="/static/c3/c3.css" rel="stylesheet" type="text/css">
-<link href="/static/bootstrap-3.3.4-dist/css/bootstrap.css" rel="stylesheet" type="text/css">
-<!-- Get emjoi support -->
-<script src="//twemoji.maxcdn.com/twemoji.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/twemoji/1.3.2/twemoji.min.js"></script>
-<!-- Load jquery -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="{{
-  url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
-</head>
-
-<body>
-<!-- Load d3.js and c3.js -->
-<script src="/static/d3/d3.min.js" charset="utf-8"></script>
-<script src="/static/c3/c3.js"></script>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-	<ul class="nav navbar-nav">
-	  <a href="../" class="navbar-brand">FastFoodSent</a>
-	  <li><a href='google.com'>About me</a>
-	  <li><a href='google.com'>Analysis</a>
-	</ul>
-    </div>
-  </div>
-</nav>
+{% extends "layout.html" %}
+{% block body %}
 <h2 class="col-md-12">Fast Food Twitter Sentiment</h2>
 <p class="col-md-12">The chart below displays the sentiment index of a given fast food restaurant
 over the past 24 hours.  This index is calculated as the ratio of positive english language tweets
@@ -165,5 +136,4 @@ var chart = c3.generate({
 
 {% endautoescape %}
 </script>
-</body>
-</html>
+{% endblock %}
