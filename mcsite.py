@@ -8,6 +8,7 @@ import numpy as np
 import re
 import time
 import datetime
+import random
 
 app = Flask(__name__)
 app.config.from_object(__name__)
@@ -63,8 +64,6 @@ def good_and_bad_tweets():
 		bad = list(bad.text.values[-3:])
 	else:
 		bad = list(bad.text.values)
-	print map(unicode, good)
-	print map(unicode, bad)
         return jsonify(good=good, bad=bad, num_good=num_good, num_bad=num_bad)
 
 @app.route('/')

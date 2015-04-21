@@ -22,7 +22,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
 	<ul class="nav navbar-nav">
-	  <a href="../" class="navbar-brand">Name</a>
+	  <a href="../" class="navbar-brand">FastFoodSent</a>
 	  <li><a href='google.com'>About me</a>
 	  <li><a href='google.com'>Analysis</a>
 	</ul>
@@ -31,8 +31,10 @@
 </nav>
 <h2 class="col-md-12">Fast Food Twitter Sentiment</h2>
 <p class="col-md-12">The chart below displays the sentiment index of a given fast food restaurant
-over the past 24 hours.  This index is calculated as the ratio of positive tweets
-to total number of tweets from the previous hour.  Selecting any data point on the chart will display aselection of positive and negative tweets from the 10 minutes prior to the selected value in addition to the total number of negative and positive tweets from that same 10 minute window.</p>
+over the past 24 hours.  This index is calculated as the ratio of positive english language tweets
+to the total number of english language tweets collected from the previous hour.</p>
+<p class="col-md-12">Selecting any data point on the chart will display a selection of positive and
+negative tweets from the 10 minutes prior to the selected value.</p>
 </script>
 <div class="col-md-12">
 <div id="chart" style="padding-right:1cm;"></div>
@@ -69,7 +71,7 @@ var chart = c3.generate({
 	xs: {
 	    "McDonald's": 'mc_times',
 	    "Starbucks": 'st_times',
-	    "Chipotle": 'ch_times',
+//	    "Chipotle": 'ch_times',
 	    "Pizza Hut": 'ph_times',
 	    "Taco Bell": 'ta_times',
 	    "KFC": 'kfc_times',
@@ -79,8 +81,8 @@ var chart = c3.generate({
 		["McDonald's"].concat(mc_avgs),
 		['st_times'].concat(st_times),
 		['Starbucks'].concat(st_avgs),
-		['ch_times'].concat(ch_times),
-		['Chipotle'].concat(ch_avgs),
+//		['ch_times'].concat(ch_times),
+//		['Chipotle'].concat(ch_avgs),
 		['ph_times'].concat(ph_times),
 		['Pizza Hut'].concat(ph_avgs),
 		['ta_times'].concat(ta_times),
@@ -88,7 +90,7 @@ var chart = c3.generate({
 		['kfc_times'].concat(kfc_times),
 		['KFC'].concat(kfc_avgs)
         ],
-	hide: ['Chipotle', 'Pizza Hut', 'Taco Bell', 'KFC'],
+	hide: [ 'Pizza Hut', 'Taco Bell', 'KFC'],
 	selection: {
 	    enabled: true,
 	    multiple: false
@@ -124,10 +126,10 @@ var chart = c3.generate({
 	colors: {
 	   "McDonald's": '#FF4747',
 	   "Starbucks": '#005C00',
-	   "Chipotle": '#993333',
+//	   "Chipotle": '#993333',
 	   "Pizza Hut": '#FF9900',
 	   "Taco Bell": '#005CE6',
-	   "KFC": '#E68A00'
+	   "KFC": '#5C0099'
 	}
     },
     point: {
