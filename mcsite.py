@@ -17,16 +17,36 @@ app.config.from_envvar('FLASKR_SETTINGS', silent=True)
 
 
 def running_avg(arr1, arr2, N):
-    i = 0
-    size = len(arr1)
-    res = []
-    while i + N < size:
-        res.append(float(arr1.values[i:i+N].sum()) / arr2.values[i:i+N].sum())
-        i += 1
-    return res
+	'''
+	Finds the running average where arr1 is a dataframe column containing
+	values, arr2 is a dataframe column containing counts, and N is the span
+	of the rolling average.
+
+	@param arr1, dataframe column containing values to be average
+	@param arr2, dataframe column containing counts of values to be 
+        averaged
+	@param N, span for rolling average
+
+	returns, an array of the N-period rolling average
+	'''
+
+	i = 0
+	size = len(arr1)
+	res = []
+	while i + N < size:
+   		res.append(float(arr1.values[i:i+N].sum()) / arr2.values[i:i+N].sum())
+        	i += 1
+	return res
 
 
 def grab_data(rest):
+        '''
+        grabs all data pertaining to a restaurant
+	
+	@param rest, a string corresponding to the name of a restaurant
+	returns, a dataframe of all tweets pertaining to the restaurant
+	'''
+
 	time_now = time.time()
 	conn = psycopg2.connect("dbname=fastfoodtweets user=vagrant")
 	cur = conn.cursor()
@@ -46,8 +66,8 @@ def good_and_bad_tweets():
 	rest = re.sub("[']", "", request.args.get('rest', 0, type=str).lower())
 	ts = request.args.get('ts', 0, type=int)
 	conn = psycopg2.connect("dbname=fastfoodtweets user=vagrant")
-        cur = conn.cursor()
-        data = pd.read_sql("select * from mctweets where (text_cleaned like '%%%s%%') \
+	cur = conn.cursor()
+	data = pd.read_sql("select * from mctweets where (text_cleaned like '%%%s%%') \
         and (time_adj = %s);" % (rest, ts), conn)
         conn.close()
 	good = data[data.sents == 1].sort(columns=['prob'])
